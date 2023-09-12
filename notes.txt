@@ -1,8 +1,11 @@
-username: admin
-password: antoine6
+username: hobboweb
+password: Ab12345!
+url: hobbo.oncloud.gr/s1services
+
 serial: 01104325230522
 soft1 address: 2260983061 # 86C3DD15
 Web Service Code: 900-970-100
 
 API documentation: https://www.softone.gr/ws/
 developer docs: https://groups.google.com/g/soft1/
+
