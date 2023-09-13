@@ -7,6 +7,7 @@ USERNAME = 'hobboweb'
 PASSWORD = 'Ab12345!'
 APP_ID = '1000'
 
+
 def login_to_erp():
     # Define the request payload
     payload = {
@@ -15,10 +16,10 @@ def login_to_erp():
         "password": PASSWORD,
         "appId": APP_ID
     }
-    
+
     # Making the request
     response = requests.post(BASE_URL, json=payload)
-    
+
     # Check the response
     if response.status_code == 200:
         response_data = response.json()
@@ -48,6 +49,7 @@ def login_to_erp():
         print("Error:", response.status_code)
         return None
 
+
 def authenticate(client_id, company, branch, module, ref_id):
     # Define the request payload
     payload = {
@@ -58,10 +60,10 @@ def authenticate(client_id, company, branch, module, ref_id):
         "MODULE": module,
         "REFID": ref_id
     }
-    
+
     # Making the request
     response = requests.post(BASE_URL, json=payload)
-    
+
     # Check the response
     if response.status_code == 200:
         response_data = response.json()
@@ -77,12 +79,13 @@ def authenticate(client_id, company, branch, module, ref_id):
         print("Error:", response.status_code)
         return False
 
+
 if __name__ == "__main__":
     login_resp = login_to_erp()
     if login_resp == None:
         print("Could not retrieve clientID.")
         exit(-1)
-    
+
     auth_resp = authenticate(
         login_resp['client_id'],
         login_resp['company'],
@@ -93,25 +96,71 @@ if __name__ == "__main__":
     if auth_resp == False:
         print("Authentication failed!")
         exit(-1)
-    
+
     login_resp['client_id'] = auth_resp['clientID']
 
-    # get object item tables
+    # # get objects
+    # payload = {
+    #     "service": "getObjects",
+    #     "clientID": login_resp['client_id'],
+    #     "appId": APP_ID
+    # }
+
+    # response = requests.get(BASE_URL, json=payload)
+    # print(response.content)
+
+    # # get object item tables
+    # payload = {
+    #     "service": "getObjectTables",
+    #     "clientID": login_resp['client_id'],
+    #     "appId": APP_ID,
+    #     "OBJECT": "ITEM.MTRSUPCODE"
+    # }
+    # response = requests.get(BASE_URL, json=payload)
+    # print(response.content)
+
+    # # get object item fields
+    # payload = {
+    #     "service": "getTableFields",
+    #     "clientID": login_resp['client_id'],
+    #     "appId": APP_ID,
+    #     "OBJECT": "ITEM",
+    #     "TABLE": "ITEM"
+    # }
+    # response = requests.get(BASE_URL, json=payload)
+    # print(response.content)
+
+    # # get selector fields
+    # payload = {
+    #     "service": "selectorFields",
+    #     "clientID": login_resp['client_id'],
+    #     "appId": APP_ID,
+    #     "TABLENAME": "MTRL",
+    #     "KEYNAME": "MTRSUP",
+    #     "KEYVALUE": "000044",
+    #     "RESULTFIELDS": "CODE,NAME,CODE1"
+    # }
+    # response = requests.get(BASE_URL, json=payload)
+    # print(response.content)
+
+    # get data
     payload = {
-        "service": "getObjectTables",
-        "clientID": login_resp['client_id'],
-        "appId": APP_ID,
-        "OBJECT": "ITEM"
-    }
-    response = requests.get(BASE_URL, json=payload)
-    
-    # get object item fields
-    payload = {
-        "service": "getTableFields",
+        "service": "getData",
         "clientID": login_resp['client_id'],
         "appId": APP_ID,
         "OBJECT": "ITEM",
-        "TABLE": "ITEM"
+        "FORM": "",
+
     }
     response = requests.get(BASE_URL, json=payload)
     print(response.content)
+
+    # # get selector data
+    # payload = {
+    #     "service": "getSelectorData",
+    #     "clientID": login_resp['client_id'],
+    #     "appId": APP_ID,
+    #     "EDITOR": "1|TRDR|TRDR|SODTYPE=13 AND ISPROSP='0'|"
+    # }
+    # response = requests.get(BASE_URL, json=payload)
+    # print(response.content)

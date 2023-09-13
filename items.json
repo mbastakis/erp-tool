@@ -1,0 +1,3 @@
+Login successful!
+Authentication successful!
+b'{"success": true, "readOnly":false, "data":{"ITEM":[],"MTRSUPPRCS":[],"MTRSUBSTITUTE":[],"MTRBRNLIMITS":[],"ITEEXTRA":[],"ITECMP":[],"ITECPRICES":[],"ITECPRICESG":[],"MTRSUPCODE":[],"ITEBAIL":[],"MTRDEFWHS":[],"MTRDEFWHSCMP":[],"XTRDOCDATA":[],"ITEDOCDATA":[],"CDIMLEVELd":[],"CDIMLIMd":[],"CDIMSUPPRCd":[],"MTRLATTRIBUTES":[],"VINSCDIM":[],"VCDIMLINES":[],"VQTYANAL":[],"VBUFSET":[],"VITEMLINE":[],"VCMPLINE":[],"VINCRSTEP":[],"VLIMLINE":[],"EVTITEM":[]}, "prtname":"", "caption":" - ", "calc":false, "einvoice":false, "remoteKey":""}'
