@@ -1,0 +1,3431 @@
+{
+    "success": true,
+    "key": "ITEM.MTRL",
+    "model": {
+        "ITEBAIL": {
+            "relationship": "OneToMany",
+            "editable": true,
+            "fields": [
+                {
+                    "name": "BAILTYPE",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 27,
+                    "type": "int",
+                    "def": "1"
+                },
+                {
+                    "name": "ISACTIVE",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "1"
+                },
+                {
+                    "name": "LINENUM",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "int",
+                    "def": "9999999"
+                },
+                {
+                    "name": "MTRLBAIL",
+                    "editType": "Selector",
+                    "selectorVF": "ITEBAIL.MTRLBAIL_ITEM_CODE|ITEBAIL.MTRLBAIL_ITEM_NAME",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRLBAIL_ITEM_CODE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "MTRLBAIL_ITEM_NAME",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 131,
+                    "type": "string"
+                },
+                {
+                    "name": "MU11",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float",
+                    "def": "1"
+                }
+            ]
+        },
+        "ITEDOCDATA": {
+            "relationship": "OneToOne",
+            "editable": true,
+            "fields": [
+                {
+                    "name": "SODATA",
+                    "editType": "21",
+                    "selectorVF": "",
+                    "size": 20,
+                    "type": "image"
+                },
+                {
+                    "name": "SOFNAME",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 901,
+                    "type": "string"
+                }
+            ]
+        },
+        "ITEEXTRA": {
+            "relationship": "OneToOne",
+            "editable": true,
+            "fields": [
+                {
+                    "name": "BOOL01",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "0"
+                },
+                {
+                    "name": "BOOL02",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "0"
+                },
+                {
+                    "name": "BOOL03",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "0"
+                },
+                {
+                    "name": "BOOL04",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "0"
+                },
+                {
+                    "name": "CPVCODE",
+                    "editType": "MemoryTable",
+                    "selectorVF": "CPVCODES.SAFTTAX|CPVCODES.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "DATE01",
+                    "editType": "DateTime",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "date"
+                },
+                {
+                    "name": "DATE02",
+                    "editType": "DateTime",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "date"
+                },
+                {
+                    "name": "DATE03",
+                    "editType": "DateTime",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "date"
+                },
+                {
+                    "name": "DATE04",
+                    "editType": "DateTime",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "date"
+                },
+                {
+                    "name": "DATE05",
+                    "editType": "DateTime",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "date"
+                },
+                {
+                    "name": "MTRATTRIBUTEG",
+                    "editType": "MemoryTable",
+                    "selectorVF": "MTRATTRIBUTEG.CODE|MTRATTRIBUTEG.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "NUM01",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "NUM02",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "NUM03",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "NUM04",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "NUM05",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "SOESHOP",
+                    "editType": "MultiSelect",
+                    "selectorVF": "",
+                    "size": 21,
+                    "type": "string"
+                },
+                {
+                    "name": "UTBL01",
+                    "editType": "MemoryTable",
+                    "selectorVF": "UTBL01.UTBL01|UTBL01.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "UTBL02",
+                    "editType": "MemoryTable",
+                    "selectorVF": "UTBL02.UTBL02|UTBL02.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "UTBL03",
+                    "editType": "MemoryTable",
+                    "selectorVF": "UTBL03.UTBL03|UTBL03.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "UTBL04",
+                    "editType": "MemoryTable",
+                    "selectorVF": "UTBL04.UTBL04|UTBL04.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "UTBL05",
+                    "editType": "MemoryTable",
+                    "selectorVF": "UTBL05.UTBL05|UTBL05.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "VARCHAR01",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 101,
+                    "type": "string"
+                },
+                {
+                    "name": "VARCHAR02",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 101,
+                    "type": "string"
+                },
+                {
+                    "name": "VARCHAR03",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 101,
+                    "type": "string"
+                },
+                {
+                    "name": "VARCHAR04",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 101,
+                    "type": "string"
+                },
+                {
+                    "name": "VARCHAR05",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 101,
+                    "type": "string"
+                }
+            ]
+        },
+        "ITEM": {
+            "relationship": "OneToOne",
+            "editable": true,
+            "fields": [
+                {
+                    "name": "ACNMSK",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "ACNMSK1",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "ACNMSK9",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 26,
+                    "type": "string"
+                },
+                {
+                    "name": "ACNMSKS",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "ACNMSKX",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "APVCODE",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 26,
+                    "type": "string"
+                },
+                {
+                    "name": "CODE",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 26,
+                    "type": "string"
+                },
+                {
+                    "name": "CODE1",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 26,
+                    "type": "string"
+                },
+                {
+                    "name": "CODE2",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 51,
+                    "type": "string"
+                },
+                {
+                    "name": "COMMISION",
+                    "editType": "MemoryTable",
+                    "selectorVF": "ITECOMMISION.COMMISION|ITECOMMISION.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "CRDCARDMODE",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 69,
+                    "type": "int",
+                    "def": "0"
+                },
+                {
+                    "name": "DISCOPTION",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 26,
+                    "type": "int",
+                    "def": "1"
+                },
+                {
+                    "name": "EXPN1",
+                    "editType": "MemoryTable",
+                    "selectorVF": "EXPN.EXPN|EXPN.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "EXPN2",
+                    "editType": "MemoryTable",
+                    "selectorVF": "EXPN.EXPN|EXPN.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "EXPVAL1",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "FROMVAL",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 17,
+                    "type": "int",
+                    "def": "0"
+                },
+                {
+                    "name": "GUARTIME",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "GWEIGHT",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "HASBAIL",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "0"
+                },
+                {
+                    "name": "INSDATE",
+                    "editType": "DateTime",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "date",
+                    "def":"\'20230918\'"
+                },
+                {
+                    "name": "INSUSER",
+                    "editType": "MemoryTable",
+                    "selectorVF": "USERS.USERS|USERS.NAME",
+                    "size": 20,
+                    "type": "int",
+                    "def": "263"
+                },
+                {
+                    "name": "ISACTIVE",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "1"
+                },
+                {
+                    "name": "ITEQTY",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "KADTAXIS",
+                    "editType": "Selector",
+                    "selectorVF": "ITEM.KADTAXIS_KADTAXIS_CODE|ITEM.KADTAXIS_KADTAXIS_NAME",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "KADTAXIS_KADTAXIS_CODE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 18,
+                    "type": "string"
+                },
+                {
+                    "name": "KADTAXIS_KADTAXIS_NAME",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 258,
+                    "type": "string"
+                },
+                {
+                    "name": "KEPYO",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "1"
+                },
+                {
+                    "name": "MARKUPR",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "MARKUPW",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "MCOUNTRY",
+                    "editType": "MemoryTable",
+                    "selectorVF": "COUNTRY.COUNTRY|COUNTRY.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MINPRCMK",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "MTRACN",
+                    "editType": "MemoryTable",
+                    "selectorVF": "ITEMGL.MTRACN|ITEMGL.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRCATEGORY",
+                    "editType": "MemoryTable",
+                    "selectorVF": "ITECATEGORY.MTRCATEGORY|ITECATEGORY.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRGASTYPE",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 79,
+                    "type": "int",
+                    "def": "0"
+                },
+                {
+                    "name": "MTRGROUP",
+                    "editType": "MemoryTable",
+                    "selectorVF": "ITEGROUP.MTRGROUP|ITEGROUP.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRL",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRMANFCTR",
+                    "editType": "MemoryTable",
+                    "selectorVF": "MTRMANFCTR.MTRMANFCTR|MTRMANFCTR.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRMARK",
+                    "editType": "MemoryTable",
+                    "selectorVF": "ITEMARK.MTRMARK|ITEMARK.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRMODEL",
+                    "editType": "MemoryTable",
+                    "selectorVF": "ITEMODEL.MTRMODEL|ITEMODEL.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRPCATEGORY",
+                    "editType": "MemoryTable",
+                    "selectorVF": "MTRPCATEGORY.MTRPCATEGORY|MTRPCATEGORY.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRPLACE",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 26,
+                    "type": "string"
+                },
+                {
+                    "name": "MTRPRJCBLD",
+                    "editType": "MemoryTable",
+                    "selectorVF": "MTRPRJCBLD.MTRPRJCBLD|MTRPRJCBLD.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRSEASON",
+                    "editType": "MemoryTable",
+                    "selectorVF": "MTRSEASON.MTRSEASON|MTRSEASON.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRSUP",
+                    "editType": "Selector",
+                    "selectorVF": "ITEM.MTRSUP_SUPPLIER_CODE|ITEM.MTRSUP_SUPPLIER_NAME",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRSUP_SUPPLIER_CODE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "MTRSUP_SUPPLIER_NAME",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 131,
+                    "type": "string"
+                },
+                {
+                    "name": "MTRSUPBRANCH",
+                    "editType": "Selector",
+                    "selectorVF": "ITEM.MTRSUPBRANCH_SUPBRANCH_CODE|ITEM.MTRSUPBRANCH_SUPBRANCH_NAME",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRSUPBRANCH_SUPBRANCH_CODE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "MTRSUPBRANCH_SUPBRANCH_NAME",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 67,
+                    "type": "string"
+                },
+                {
+                    "name": "MTRTYPE",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 72,
+                    "type": "int",
+                    "def": "0"
+                },
+                {
+                    "name": "MTRUNIT1",
+                    "editType": "MemoryTable",
+                    "selectorVF": "MTRUNIT.MTRUNIT|MTRUNIT.SHORTCUT",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRUNIT2",
+                    "editType": "MemoryTable",
+                    "selectorVF": "MTRUNIT.MTRUNIT|MTRUNIT.SHORTCUT",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRUNIT3",
+                    "editType": "MemoryTable",
+                    "selectorVF": "MTRUNIT.MTRUNIT|MTRUNIT.SHORTCUT",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRUNIT4",
+                    "editType": "MemoryTable",
+                    "selectorVF": "MTRUNIT.MTRUNIT|MTRUNIT.SHORTCUT",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "MU12MODE",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 27,
+                    "type": "int"
+                },
+                {
+                    "name": "MU13MODE",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 27,
+                    "type": "int"
+                },
+                {
+                    "name": "MU14MODE",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 27,
+                    "type": "int"
+                },
+                {
+                    "name": "MU21",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "MU31",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float",
+                    "def": "1"
+                },
+                {
+                    "name": "MU41",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float",
+                    "def": "1"
+                },
+                {
+                    "name": "MYDATACODE",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 44,
+                    "type": "int",
+                    "def": "1"
+                },
+                {
+                    "name": "NAME",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 129,
+                    "type": "string"
+                },
+                {
+                    "name": "NODISCOPTION",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 26,
+                    "type": "int",
+                    "def": "1"
+                },
+                {
+                    "name": "PRICER",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICER01",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICER02",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICER03",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICER04",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICER05",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICER06",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICEW",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICEW01",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICEW02",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICEW03",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICEW04",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICEW05",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICEW06",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PURQTY",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "RELITEM",
+                    "editType": "Selector",
+                    "selectorVF": "ITEM.RELITEM_ITEM_CODE|ITEM.RELITEM_ITEM_NAME",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "RELITEM_ITEM_CODE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "RELITEM_ITEM_NAME",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 131,
+                    "type": "string"
+                },
+                {
+                    "name": "REMAINLIMMAX",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "REMAINLIMMIN",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "REMAINMODE",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "1"
+                },
+                {
+                    "name": "REMARKS",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 2001,
+                    "type": "string"
+                },
+                {
+                    "name": "REORDERLEVEL",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "SALQTY",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "SETITEM",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 258,
+                    "type": "string"
+                },
+                {
+                    "name": "SOCLMNS1",
+                    "editType": "MemoryTable",
+                    "selectorVF": "BLDSOCLMNS.SOCLMNS|BLDSOCLMNS.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "SODISCOUNT",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "SODISCOUNT1",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "SODISCOUNT2",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "STANDCOST",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "TRENDFACTOR",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "UNIQSUB",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "1"
+                },
+                {
+                    "name": "UPDDATE",
+                    "editType": "DateTime",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "date",
+                    "def":"\'20230918\'"
+                },
+                {
+                    "name": "UPDUSER",
+                    "editType": "MemoryTable",
+                    "selectorVF": "USERS.USERS|USERS.NAME",
+                    "size": 20,
+                    "type": "int",
+                    "def": "263"
+                },
+                {
+                    "name": "VAT",
+                    "editType": "MemoryTable",
+                    "selectorVF": "VAT.VAT|VAT.NAME",
+                    "size": 20,
+                    "type": "int"
+                },
+                {
+                    "name": "VOLUME",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "WARNING",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 251,
+                    "type": "string"
+                },
+                {
+                    "name": "WEBPAGE",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 129,
+                    "type": "string"
+                },
+                {
+                    "name": "WEIGHT",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                }
+            ]
+        },
+        "MTRLATTRIBUTES": {
+            "relationship": "OneToMany",
+            "editable": true,
+            "fields": [
+                {
+                    "name": "ISACTIVE",
+                    "editType": "CheckBox",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "boolean",
+                    "def": "1"
+                },
+                {
+                    "name": "LINENUM",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "int",
+                    "def": "9999999"
+                },
+                {
+                    "name": "MTRATTRIBUTE",
+                    "editType": "Selector",
+                    "selectorVF": "MTRLATTRIBUTES.MTRATTRIBUTE_MTRATTRIBUTE_CODE|MTRLATTRIBUTES.MTRATTRIBUTE_MTRATTRIBUTE_NAME",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRATTRIBUTE_MTRATTRIBUTE_CODE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 18,
+                    "type": "string"
+                },
+                {
+                    "name": "MTRATTRIBUTE_MTRATTRIBUTE_NAME",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 67,
+                    "type": "string"
+                },
+                {
+                    "name": "MTRATTRIBUTELN",
+                    "editType": "Selector",
+                    "selectorVF": "MTRLATTRIBUTES.MTRATTRIBUTELN_MTRATTRIBUTELN_CODE|MTRLATTRIBUTES.MTRATTRIBUTELN_MTRATTRIBUTELN_SOVALUE",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRATTRIBUTELN_MTRATTRIBUTELN_CODE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 18,
+                    "type": "string"
+                },
+                {
+                    "name": "MTRATTRIBUTELN_MTRATTRIBUTELN_SOVALUE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 67,
+                    "type": "string"
+                },
+                {
+                    "name": "SOVALUE",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 46,
+                    "type": "string"
+                }
+            ]
+        },
+        "MTRSUBSTITUTE": {
+            "relationship": "OneToMany",
+            "editable": true,
+            "fields": [
+                {
+                    "name": "CODE",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 51,
+                    "type": "string"
+                },
+                {
+                    "name": "ISACTIVE",
+                    "editType": "Strings",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "int",
+                    "def": "1"
+                },
+                {
+                    "name": "LINENUM",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "int",
+                    "def": "9999999"
+                },
+                {
+                    "name": "MTRLOT",
+                    "editType": "Selector",
+                    "selectorVF": "MTRSUBSTITUTE.MTRLOT_MTRLOT_CODE|MTRSUBSTITUTE.MTRLOT_MTRLOT_FINALDATE",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRLOT_MTRLOT_CODE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 53,
+                    "type": "string"
+                },
+                {
+                    "name": "MTRPACK",
+                    "editType": "Selector",
+                    "selectorVF": "MTRSUBSTITUTE.MTRPACK_MTRPACK_CODE|MTRSUBSTITUTE.MTRPACK_MTRPACK_NAME",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "MTRPACK_MTRPACK_CODE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "NAME",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 129,
+                    "type": "string",
+                    "def":"\'\'"
+                },
+                {
+                    "name": "PRICER",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "PRICEW",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "QTY1",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float",
+                    "def": "1"
+                },
+                {
+                    "name": "QTY2",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                }
+            ]
+        },
+        "MTRSUPPRCS": {
+            "relationship": "OneToMany",
+            "editable": true,
+            "fields": [
+                {
+                    "name": "LASTPRICE",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "LINENUM",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "int",
+                    "def": "9999999"
+                },
+                {
+                    "name": "MTRSUPCODE",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 51,
+                    "type": "string"
+                },
+                {
+                    "name": "PARDAYS",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "SUPDATE",
+                    "editType": "DateTime",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "date"
+                },
+                {
+                    "name": "SUPPRICE",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 15,
+                    "type": "float"
+                },
+                {
+                    "name": "TRDR",
+                    "editType": "Selector",
+                    "selectorVF": "MTRSUPPRCS.TRDR_SUPPLIER_CODE|MTRSUPPRCS.TRDR_SUPPLIER_NAME",
+                    "size": 6,
+                    "type": "int"
+                },
+                {
+                    "name": "TRDR_SUPPLIER_CODE",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 28,
+                    "type": "string"
+                },
+                {
+                    "name": "TRDR_SUPPLIER_NAME",
+                    "editType": "Selector",
+                    "selectorVF": "",
+                    "size": 131,
+                    "type": "string"
+                }
+            ]
+        },
+        "XTRDOCDATA": {
+            "relationship": "OneToMany",
+            "editable": true,
+            "fields": [
+                {
+                    "name": "LINENUM",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 6,
+                    "type": "int",
+                    "def": "9999999"
+                },
+                {
+                    "name": "SOFNAME",
+                    "editType": "Simple",
+                    "selectorVF": "",
+                    "size": 901,
+                    "type": "string"
+                }
+            ]
+        }
+    },
+    "form": [
+        {
+            "xtype": "s1cont",
+            "index": 1,
+            "items": [
+                {
+                    "xtype": "s1fields",
+                    "index": 2,
+                    "flex": 0.25,
+                    "group": 1,
+                    "items": [s1Editor("0;ITEM.CODE;\xca\xf9\xe4\xe9\xea\xfc\xf2;;;1;0;1;1;0;;;;0")
+                    ]
+                },
+                {
+                    "xtype": "s1fields",
+                    "index": 3,
+                    "flex": 0.65,
+                    "group": 1,
+                    "items": [s1Editor("0;ITEM.NAME;\xd0\xe5\xf1\xe9\xe3\xf1\xe1\xf6\xde;;;1;0;1;1;0;;;;0")
+                    ]
+                },
+                {
+                    "xtype": "s1fields",
+                    "index": 4,
+                    "flex": 0.10,
+                    "group": 1,
+                    "items": [s1Editor("5;ITEM.ISACTIVE;\xc5\xed\xe5\xf1\xe3\xfc;;5|$Y||||0;2;0;1;1;0;;;$Y;0")
+                    ]
+                }
+            ]
+        },
+        {
+            "xtype": "s1tabpanel",
+            "index": 5,
+            "items": [
+                {
+                    "index": 6,
+                    "sid": "pg1",
+                    "title":"\xc2\xe1\xf3\xe9\xea\xdc \xf3\xf4\xef\xe9\xf7\xe5\xdf\xe1",
+                    "items": [
+                        {
+                            "xtype": "s1cont",
+                            "index": 7,
+                            "items": [
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 8,
+                                    "flex": 0.50,
+                                    "title": "Fast entry",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 9,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 10,
+                                                    "flex": 0.99,
+                                                    "group": 10,
+                                                    "items": [s1Editor("2;ITEM.MTRUNIT1;\xcc.\xcc;;2|MTRUNIT|MTRUNIT||ISACTIVE=1|0;2;0;1;1;0;MTRUNIT.MTRUNIT|MTRUNIT.SHORTCUT;;MTRUNIT;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 11,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 12,
+                                                    "flex": 0.99,
+                                                    "group": 10,
+                                                    "items": [s1Editor("2;ITEM.VAT;\xd6.\xd0.\xc1.;;2|VAT|VAT||ISACTIVE=1|0;2;0;1;1;0;VAT.VAT|VAT.NAME;;VAT;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 13,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 14,
+                                                    "flex": 0.99,
+                                                    "group": 10,
+                                                    "items": [s1Editor("2;ITEM.MTRACN;\xcb\xef\xe3.\xea\xe1\xf4\xe7\xe3\xef\xf1\xdf\xe1;;2|ITEMGL|MTRACN||ISACTIVE=1|0;3;0;1;0;0;ITEMGL.MTRACN|ITEMGL.NAME;ITEM.MTRTYPE,ITEM.MTRTYPE1,ITEM.ACNMSK,ITEM.ACNMSK1,ITEM.ACNMSK2,ITEM.ACNMSK3,ITEM.ACNMSK4,ITEM.ACNMSK5,ITEM.ACNMSK6,ITEM.ACNMSKS,ITEM.ACNMSKX,ITEM.CRDCARDMODE,ITEM.MYDATACODE,ITEM.DISCOPTION,ITEM.NODISCOPTION|MTRTYPE,MTRTYPE1,ACNMSK01,ACNMSK02,ACNMSK03,ACNMSK04,ACNMSK05,ACNMSK06,ACNMSK07,ACNMSKS,ACNMSKX,CRDCARDMODE,MYDATACODE,DISCOPTION,NODISCOPTION;ITEMGL;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 15,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 16,
+                                                    "flex": 0.99,
+                                                    "group": 10,
+                                                    "items": [s1Editor("0;ITEM.CODE1;\xca\xf9\xe4.Barcode;;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 17,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 18,
+                                                    "flex": 0.99,
+                                                    "group": 10,
+                                                    "items": [s1Editor("0;ITEM.CODE2;\xca\xf9\xe4.\xe5\xf1\xe3\xef\xf3\xf4\xe1\xf3\xdf\xef\xf5;;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 19,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 20,
+                                                    "flex": 0.99,
+                                                    "group": 10,
+                                                    "items": [s1Editor("0;ITEM.APVCODE;\xd4\xe5\xf7\xed\xe9\xea\xfc\xf2 \xea\xf9\xe4\xe9\xea\xfc\xf2;;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 21,
+                                    "flex": 0.50,
+                                    "title":"T\xe1\xee\xe9\xed\xfc\xec\xe7\xf3\xe7",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 22,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 23,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.MTRCATEGORY;\xc5\xec\xf0\xef\xf1.\xea\xe1\xf4\xe7\xe3\xef\xf1\xdf\xe1;;2|ITECATEGORY|MTRCATEGORY||ISACTIVE=1|0;2;0;1;0;0;ITECATEGORY.MTRCATEGORY|ITECATEGORY.NAME;ITEM.VAT,ITEM.MTRUNIT1,ITEM.KEPYO,ITEM.MTRACN|VAT,MTRUNIT1,KEPYO,MTRACN;ITECATEGORY;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 24,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 25,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.MTRGROUP;\xcf\xec\xdc\xe4\xe1;;2|ITEGROUP|MTRGROUP||ISACTIVE=1|0;3;0;1;0;0;ITEGROUP.MTRGROUP|ITEGROUP.NAME;;$ITEGROUP;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 26,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 27,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("1;ITEM.RELITEM;\xd3\xf5\xf3\xf7\xdd\xf4\xe9\xf3\xe7\xf2;;1|ITEM|MTRL|||0;3;0;1;0;0;ITEM.RELITEM_ITEM_CODE|ITEM.RELITEM_ITEM_NAME;;ITEM;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 28,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 29,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.MTRSEASON;\xd3\xe1\xe9\xe6\xfc\xed;;2|MTRSEASON|MTRSEASON||ISACTIVE=1|0;2;0;1;0;0;MTRSEASON.MTRSEASON|MTRSEASON.NAME;;MTRSEASON;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 30,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 31,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.COMMISION;\xca\xeb\xdc\xf3\xe7 \xf0\xf1\xef\xec\xde\xe8\xe5\xe9\xe1\xf2;;2|ITECOMMISION|COMMISION||ISACTIVE=1|0;2;0;1;0;0;ITECOMMISION.COMMISION|ITECOMMISION.NAME;;$ITECOMMISION;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1image",
+                                    "index": 33,
+                                    "flex": 0.50,
+                                    "items": [s1Editor("21;ITEDOCDATA.SODATA;\xc5\xe9\xea\xfc\xed\xe1;;21|$Image||||0;15;0;1;0;0;;;$Image;0")
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 34,
+                            "items": [
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 35,
+                                    "flex": 0.50,
+                                    "title":"\xd0\xf1\xfc\xf3\xe8\xe5\xf4\xe1 \xf3\xf4\xef\xe9\xf7\xe5\xdf\xe1",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 36,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 37,
+                                                    "flex": 0.99,
+                                                    "group": 10,
+                                                    "items": [s1Editor("301;ITEM.WEBPAGE;Web page;;;1;0;1;0;0;;;$WEBPAGE;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 38,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 39,
+                                                    "flex": 0.99,
+                                                    "group": 10,
+                                                    "items": [s1Editor("0;ITEM.WARNING;\xd0\xf1\xef\xe5\xe9\xe4\xef\xf0\xef\xdf\xe7\xf3\xe7;;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 40,
+                                    "flex": 0.50,
+                                    "title":"\xd3\xf4\xef\xe9\xf7\xe5\xdf\xe1 \xea\xe1\xf4\xe1\xf3\xea\xe5\xf5\xde\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 41,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 42,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.MTRMANFCTR;\xca\xe1\xf4\xe1\xf3\xea\xe5\xf5\xe1\xf3\xf4\xde\xf2;;2|MTRMANFCTR|MTRMANFCTR||ISACTIVE=1|0;3;0;1;0;0;MTRMANFCTR.MTRMANFCTR|MTRMANFCTR.NAME;;$MTRMANFCTR;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 43,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 44,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.MTRMARK;\xcc\xdc\xf1\xea\xe1;;2|ITEMARK|MTRMARK||ISACTIVE=1|0;3;0;1;0;0;ITEMARK.MTRMARK|ITEMARK.NAME;;$ITEMARK;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 45,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 46,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.MTRMODEL;\xcc\xef\xed\xf4\xdd\xeb\xef;;2|ITEMODEL|MTRMODEL||ISACTIVE=1|0;3;0;1;0;0;ITEMODEL.MTRMODEL|ITEMODEL.NAME;ITEM.MTRMARK,ITEM.MTRGROUP|MTRMARK,MTRGROUP;ITEMODEL;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 47,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 48,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.MCOUNTRY;\xd7\xfe\xf1\xe1 \xea\xe1\xf4\xe1\xf3\xea\xe5\xf5\xde\xf2;;2|COUNTRY|COUNTRY||ISACTIVE=1|0;2;0;1;0;0;COUNTRY.COUNTRY|COUNTRY.NAME;;COUNTRY;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 49,
+                                    "flex": 0.50,
+                                    "title":"\xd4\xe9\xec\xdd\xf2/\xc5\xea\xf0\xf4\xfe\xf3\xe5\xe9\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 50,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 51,
+                                                    "flex": 0.99,
+                                                    "group": 33,
+                                                    "items": [s1Editor("0;ITEM.PRICEW;\xd7\xef\xed\xe4\xf1\xe9\xea\xde\xf2;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 52,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 53,
+                                                    "flex": 0.99,
+                                                    "group": 33,
+                                                    "items": [s1Editor("0;ITEM.PRICER;\xcb\xe9\xe1\xed\xe9\xea\xde\xf2;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 54,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 55,
+                                                    "flex": 0.99,
+                                                    "group": 33,
+                                                    "items": [s1Editor("0;ITEM.SODISCOUNT;\xb8\xea\xf0\xf4\xf9\xf3\xe7 1 (%);;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 56,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 57,
+                                                    "flex": 0.99,
+                                                    "group": 33,
+                                                    "items": [s1Editor("0;ITEM.SODISCOUNT1;\xb8\xea\xf0\xf4\xf9\xf3\xe7 2 (%);;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 58,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 59,
+                                                    "flex": 0.99,
+                                                    "group": 33,
+                                                    "items": [s1Editor("0;ITEM.SODISCOUNT2;\xb8\xea\xf0\xf4\xf9\xf3\xe7 3 (%);;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 60,
+                            "items": [
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 61,
+                                    "flex": 0.50,
+                                    "title":"\xc5\xec\xf0\xef\xf1\xe9\xea\xdd\xf2 \xf0\xef\xeb\xe9\xf4\xe9\xea\xdd\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 62,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 63,
+                                                    "flex": 0.99,
+                                                    "group": 10,
+                                                    "items": [s1Editor("2;ITEM.MTRPCATEGORY;\xd4\xe9\xec\xef\xeb.\xea\xe1\xf4\xe7\xe3\xef\xf1\xdf\xe1;;2|MTRPCATEGORY|MTRPCATEGORY||ISACTIVE=1|0;3;0;1;0;0;MTRPCATEGORY.MTRPCATEGORY|MTRPCATEGORY.NAME;;MTRPCATEGORY;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 64,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 65,
+                                                    "flex": 0.99,
+                                                    "group": 10,
+                                                    "items": [s1Editor("3;ITEM.FROMVAL;\xd5\xf0\xef\xeb/\xf3\xec\xfc\xf2 \xe1\xf0\xfc \xe1\xee\xdf\xe1;;0=Default|1=\xd4\xe7\xf2 \xd0\xef\xf3\xfc\xf4\xe7\xf4\xe1\xf2|2=\xd4\xe7\xf2 \xd4\xe9\xec\xde\xf2|3=\xd4\xe7\xf2 \xb8\xea\xf0\xf4\xf9\xf3\xe7\xf2 1;2;0;1;1;0;;;1=\xd4\xe7\xf2 \xd0\xef\xf3\xfc\xf4\xe7\xf4\xe1\xf2;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 66,
+                                    "flex": 0.50,
+                                    "title":"\xb8\xee\xef\xe4\xe1",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 67,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 68,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.EXPN1;\xb8\xee\xef\xe4\xef 1;;2|EXPN|EXPN||ISACTIVE=1 AND USEBYITEM=1|0;2;0;1;0;0;EXPN.EXPN|EXPN.NAME;;EXPENSES;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 69,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 70,
+                                                    "flex": 0.99,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.EXPN2;\xb8\xee\xef\xe4\xef 2;;2|EXPN|EXPN||ISACTIVE=1 AND USEBYITEM=1|0;2;0;1;0;0;EXPN.EXPN|EXPN.NAME;;EXPENSES;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 71,
+                                    "flex": 0.50,
+                                    "title":"\xd4\xe9\xec\xdd\xf2 \xe5\xee\xfc\xe4\xf9\xed",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 72,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 73,
+                                                    "flex": 0.99,
+                                                    "group": 33,
+                                                    "items": [s1Editor("0;ITEM.EXPVAL1;\xd4\xe9\xec\xde 1;;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 74,
+                            "items": [
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 75,
+                                    "flex": 0.50,
+                                    "title":"\xd0\xf1\xfe\xf4\xe7 \xea\xe1\xf4\xe1\xf7\xfe\xf1\xe9\xf3\xe7",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 76,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 77,
+                                                    "flex": 0.50,
+                                                    "group": 10,
+                                                    "items": [s1Editor("10;ITEM.INSDATE;\xc7\xec\xe5\xf1\xef\xec\xe7\xed\xdf\xe1;;10|$DT||||0;11;0;1;0;1;;;$DT;0")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 78,
+                                                    "flex": 0.50,
+                                                    "group": 10,
+                                                    "items": [s1Editor("2;ITEM.INSUSER;\xd7\xf1\xde\xf3\xf4\xe7\xf2;;2|USERS|USERS||ISACTIVE=1|0;2;0;1;0;1;USERS.USERS|USERS.NAME;;USERS;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 79,
+                                    "flex": 0.50,
+                                    "title":"\xd4\xe5\xeb\xe5\xf5\xf4\xe1\xdf\xe1 \xec\xe5\xf4\xe1\xe2\xef\xeb\xde",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 80,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 81,
+                                                    "flex": 0.50,
+                                                    "group": 20,
+                                                    "items": [s1Editor("10;ITEM.UPDDATE;\xc7\xec\xe5\xf1\xef\xec\xe7\xed\xdf\xe1;;10|$DT||||0;11;0;1;0;1;;;$DT;1")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 82,
+                                                    "flex": 0.50,
+                                                    "group": 20,
+                                                    "items": [s1Editor("2;ITEM.UPDUSER;\xd7\xf1\xde\xf3\xf4\xe7\xf2;;2|USERS|USERS||ISACTIVE=1|0;2;0;1;0;1;USERS.USERS|USERS.NAME;;USERS;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "container",
+                            "index": 83,
+                            "items": []
+                        }
+                    ]
+                },
+                {
+                    "index": 84,
+                    "sid": "pg3",
+                    "title":"\xcc\xdd\xf4\xf1\xe7\xf3\xe7, \xea\xf9\xe4\xe9\xea\xef\xdf",
+                    "items": [
+                        {
+                            "xtype": "s1cont",
+                            "index": 85,
+                            "title":"\xcc\xef\xed\xdc\xe4\xe5\xf2 \xec\xdd\xf4\xf1\xe7\xf3\xe7\xf2",
+                            "items": [
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 86,
+                                    "flex": 0.50,
+                                    "group": 42,
+                                    "items": [s1Editor("2;ITEM.MTRUNIT2;\xcc.\xcc.2;;2|MTRUNIT|MTRUNIT||ISACTIVE=1|0;2;0;1;0;0;MTRUNIT.MTRUNIT|MTRUNIT.SHORTCUT;;MTRUNIT;0")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 87,
+                                    "flex": 0.25,
+                                    "group": 42,
+                                    "items": [s1Editor("0;ITEM.MU21;\xd3\xf7\xdd\xf3\xe7 \xec\xe5 \xea\xfd\xf1\xe9\xe1;;;6;0;1;0;0;;;;2")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 88,
+                                    "flex": 0.25,
+                                    "group": 42,
+                                    "items": [s1Editor("3;ITEM.MU12MODE;\xc1\xf5\xf3\xf4.\xf3\xf7\xdd\xf3\xe7;;0=\xbc\xf7\xe9|1=\xcd\xe1\xe9|2=\xc1\xec\xf6\xdf\xe4\xf1\xef\xec\xe7 \xf4\xe7\xed \xf0\xf1\xfe\xf4\xe7 \xf6\xef\xf1\xdc;2;0;1;0;0;;;1=\xcd\xe1\xe9;0")
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 89,
+                            "items": [
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 90,
+                                    "flex": 0.50,
+                                    "group": 42,
+                                    "items": [s1Editor("2;ITEM.MTRUNIT3;\xcc.\xcc.\xc1\xe3\xef\xf1\xfe\xed;;2|MTRUNIT|MTRUNIT||ISACTIVE=1|0;2;0;1;1;0;MTRUNIT.MTRUNIT|MTRUNIT.SHORTCUT;;MTRUNIT;0")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 91,
+                                    "flex": 0.25,
+                                    "group": 42,
+                                    "items": [s1Editor("0;ITEM.MU31;\xd3\xf7\xdd\xf3\xe7 \xec\xe5 \xea\xfd\xf1\xe9\xe1;;;6;0;1;1;0;;;;2")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 92,
+                                    "flex": 0.25,
+                                    "group": 42,
+                                    "items": [s1Editor("3;ITEM.MU13MODE;\xc1\xf5\xf3\xf4.\xf3\xf7\xdd\xf3\xe7;;0=\xbc\xf7\xe9|1=\xcd\xe1\xe9|2=\xc1\xec\xf6\xdf\xe4\xf1\xef\xec\xe7 \xf4\xe7\xed \xf0\xf1\xfe\xf4\xe7 \xf6\xef\xf1\xdc;2;0;1;0;0;;;1=\xcd\xe1\xe9;0")
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 93,
+                            "items": [
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 94,
+                                    "flex": 0.50,
+                                    "group": 42,
+                                    "items": [s1Editor("2;ITEM.MTRUNIT4;\xcc.\xcc.\xd0\xfe\xeb\xe7\xf3\xe7\xf2;;2|MTRUNIT|MTRUNIT||ISACTIVE=1|0;2;0;1;1;0;MTRUNIT.MTRUNIT|MTRUNIT.SHORTCUT;;MTRUNIT;0")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 95,
+                                    "flex": 0.25,
+                                    "group": 42,
+                                    "items": [s1Editor("0;ITEM.MU41;\xd3\xf7\xdd\xf3\xe7 \xec\xe5 \xea\xfd\xf1\xe9\xe1;;;6;0;1;1;0;;;;2")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 96,
+                                    "flex": 0.25,
+                                    "group": 42,
+                                    "items": [s1Editor("3;ITEM.MU14MODE;\xc1\xf5\xf3\xf4.\xf3\xf7\xdd\xf3\xe7;;0=\xbc\xf7\xe9|1=\xcd\xe1\xe9|2=\xc1\xec\xf6\xdf\xe4\xf1\xef\xec\xe7 \xf4\xe7\xed \xf0\xf1\xfe\xf4\xe7 \xf6\xef\xf1\xdc;2;0;1;0;0;;;1=\xcd\xe1\xe9;0")
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 97,
+                            "items": [
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 98,
+                                    "flex": 0.50,
+                                    "group": 42,
+                                    "items": [s1Editor("0;ITEM.VOLUME;\xbc\xe3\xea\xef\xf2;;;6;0;1;0;0;;;;7")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 99,
+                                    "flex": 0.25,
+                                    "group": 42,
+                                    "items": [s1Editor("0;ITEM.WEIGHT;\xcc\xdc\xe6\xe1;;;6;0;1;0;0;;;;7")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 100,
+                                    "flex": 0.25,
+                                    "group": 42,
+                                    "items": [s1Editor("0;ITEM.GWEIGHT;\xcc\xe9\xea\xf4\xfc \xe2\xdc\xf1\xef\xf2;;;6;0;1;0;0;;;;7")
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1tabpanel",
+                            "index": 101,
+                            "items": [
+                                {
+                                    "index": 102,
+                                    "sid": "pg2pg1",
+                                    "title":"\xc5\xed\xe1\xeb\xeb\xe1\xea\xf4\xe9\xea\xef\xdf",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 103,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 104,
+                                                    "flex": 0.50,
+                                                    "group": 0,
+                                                    "items": [s1Editor("5;ITEM.UNIQSUB;\xcc\xef\xed\xe1\xe4\xe9\xea\xfc\xf4\xe7\xf4\xe1 \xe5\xed\xe1\xeb\xeb\xe1\xea\xf4\xe9\xea\xef\xfd \xea\xf9\xe4\xe9\xea\xef\xfd;;5|$Y||||0;2;0;1;1;0;;;$Y;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1detailgrid",
+                                            "index": 105,
+                                            "model": "MTRSUBSTITUTE",
+                                            "gridSelector": {
+                                                "editor": "MTRPACK",
+                                                "fromField": "MTRPACK",
+                                                "toField": "MTRSUBSTITUTE.MTRPACK",
+                                                "filters": ""
+                                            },
+                                            "columns": [gridEditor("0;MTRSUBSTITUTE.CODE;\xca\xf9\xe4\xe9\xea\xfc\xf2;;;1;0;1;1;0;;;;0"),gridEditor("0;MTRSUBSTITUTE.NAME;\xd0\xe5\xf1\xe9\xe3\xf1\xe1\xf6\xde;;;1;0;1;1;0;;;;0"),gridEditor("0;MTRSUBSTITUTE.QTY1;\xd0\xef\xf3.1;;;6;0;1;1;0;;;;0"),gridEditor("0;MTRSUBSTITUTE.QTY2;\xd0\xef\xf3.2;;;6;0;1;1;0;;;;0"),gridEditor("1;MTRSUBSTITUTE.MTRPACK_MTRPACK_CODE;\xca\xf9\xe4\xe9\xea\xfc\xf2 \xf3\xf5\xf3\xea\xe5\xf5\xe1\xf3\xdf\xe1\xf2;;1|MTRPACK|MTRPACK|||0;1;0;1;0;0;;;MTRPACK;0"),gridEditor("1;MTRSUBSTITUTE.MTRLOT_MTRLOT_CODE;\xca\xf9\xe4\xe9\xea\xfc\xf2 \xf0\xe1\xf1\xf4\xdf\xe4\xe1\xf2;;1|MTRLOT|MTRLOT||A.MTRL=[ITEM.MTRL]|4|[SOSOURCE]~[SERIES]~[WHOUSE];1;0;1;0;0;;;MTRLOT;0"),gridEditor("0;MTRSUBSTITUTE.PRICEW;\xd4\xe9\xec\xde \xf7\xef\xed\xe4\xf1\xe9\xea\xde\xf2;;;6;0;1;0;0;;;;2"),gridEditor("0;MTRSUBSTITUTE.PRICER;\xd4\xe9\xec\xde \xeb\xe9\xe1\xed\xe9\xea\xde\xf2;;;6;0;1;0;0;;;;2"),gridEditor("3;MTRSUBSTITUTE.ISACTIVE;\xc5\xed\xe5\xf1\xe3\xfc;;0=\xbc\xf7\xe9|1=\xcd\xe1\xe9;2;0;1;1;0;;;1=\xcd\xe1\xe9;0")
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 106,
+                                    "sid": "pg2pg4",
+                                    "title":"\xc5\xe3\xe3\xf5\xef\xe4\xef\xf3\xdf\xe1\\\\\xd0\xe1\xf1\xe5\xeb\xea\xfc\xec\xe5\xed\xe1\\\\\xc1\xed\xf4\xe1\xeb\xeb\xe1\xea\xf4\xe9\xea\xdc\\\\\xc1\xed\xe1\xeb\xfe\xf3\xe9\xec\xe1\\\\\xd4\xdd\xeb\xe7 PVC",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 107,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 108,
+                                                    "flex": 0.20,
+                                                    "group": 0,
+                                                    "items": [s1Editor("5;ITEM.HASBAIL;\xc5\xe3\xe3\xf5\xef\xe4\xef\xf3\xdf\xe1 / \xd4\xdd\xeb\xe7 PVC;;5|$Y||||0;2;0;1;1;0;;;$Y;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1detailgrid",
+                                            "index": 109,
+                                            "model": "ITEBAIL",
+                                            "gridSelector": {
+                                                "editor": "ITEM",
+                                                "fromField": "MTRL",
+                                                "toField": "ITEBAIL.MTRLBAIL",
+                                                "filters": ""
+                                            },
+                                            "columns": [gridEditor("3;ITEBAIL.BAILTYPE;\xd4\xfd\xf0\xef\xf2;;1=\xc5\xe3\xe3\xf5\xef\xe4\xef\xf3\xdf\xe1|2=\xd0\xe1\xf1\xe5\xeb\xea\xfc\xec\xe5\xed\xef|3=\xc1\xed\xf4\xe1\xeb\xeb\xe1\xea\xf4\xe9\xea\xfc|4=\xc1\xed\xe1\xeb\xfe\xf3\xe9\xec\xef|5=\xd4\xdd\xeb\xe7 \xe3\xe9\xe1 \xf0\xf1\xef\xfa\xfc\xed\xf4\xe1 \xec\xe5 PVC;2;0;1;1;0;;;2=\xd0\xe1\xf1\xe5\xeb\xea\xfc\xec\xe5\xed\xef;0"),gridEditor("1;ITEBAIL.MTRLBAIL_ITEM_CODE;\xca\xf9\xe4\xe9\xea\xfc\xf2;;1|ITEM|MTRL|||0;1;0;1;0;0;;;ITEM;0"),gridEditor("1;ITEBAIL.MTRLBAIL_ITEM_NAME;\xd0\xe5\xf1\xe9\xe3\xf1\xe1\xf6\xde;;1|ITEM|MTRL|||0;1;0;1;0;0;;;ITEM;0"),gridEditor("0;ITEBAIL.MU11;\xd3\xf7\xdd\xf3\xe7 \xec\xef\xed\xdc\xe4\xf9\xed;;;6;0;1;1;0;;;;2"),gridEditor("5;ITEBAIL.ISACTIVE;\xc5\xed\xe5\xf1\xe3\xfc;;5|$Y||||0;2;0;1;1;0;;;$Y;0")
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 110,
+                                    "sid": "pg3pg1",
+                                    "title":"\xd0\xf1\xef\xf4\xe5\xe9\xed\xfc\xec\xe5\xed\xe5\xf2 \xf0\xef\xf3\xfc\xf4\xe7\xf4\xe5\xf2, \xbc\xf1\xe9\xe1 \xc1.\xd7. ",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 111,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 112,
+                                                    "flex": 0.34,
+                                                    "group": 42,
+                                                    "items": [s1Editor("0;ITEM.ITEQTY;\xd0\xf1\xef\xf4\xe5\xe9\xed\xfc\xec\xe5\xed\xe7 \xf3\xe5 \xe1\xf0\xef\xe8\xde\xea\xe7;;;6;0;1;0;0;;;;0")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 113,
+                                                    "flex": 0.33,
+                                                    "group": 42,
+                                                    "items": [s1Editor("0;ITEM.PURQTY;\xd0\xf1\xef\xf4\xe5\xe9\xed\xfc\xec\xe5\xed\xe7 \xf3\xe5 \xe1\xe3\xef\xf1\xdd\xf2;;;6;0;1;0;0;;;;0")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 114,
+                                                    "flex": 0.33,
+                                                    "group": 42,
+                                                    "items": [s1Editor("0;ITEM.SALQTY;\xd0\xf1\xef\xf4\xe5\xe9\xed\xfc\xec\xe5\xed\xe7 \xf3\xe5 \xf0\xf9\xeb\xde\xf3\xe5\xe9\xf2;;;6;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 115,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 116,
+                                                    "flex": 0.34,
+                                                    "group": 42,
+                                                    "items": [s1Editor("0;ITEM.REMAINLIMMIN;\xc5\xeb\xdc\xf7\xe9\xf3\xf4\xef \xfc\xf1\xe9\xef;;0|:VBUFSET||||0;6;0;1;0;0;;;;0")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 117,
+                                                    "flex": 0.33,
+                                                    "group": 42,
+                                                    "items": [s1Editor("0;ITEM.REMAINLIMMAX;\xcc\xdd\xe3\xe9\xf3\xf4\xef \xfc\xf1\xe9\xef;;0|:VBUFSET||||0;6;0;1;0;0;;;;0")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 118,
+                                                    "flex": 0.33,
+                                                    "group": 42,
+                                                    "items": [s1Editor("0;ITEM.REORDERLEVEL;\xbc\xf1\xe9\xef \xe1\xed\xe1\xf0\xe1\xf1\xe1\xe3\xe3\xe5\xeb\xdf\xe1\xf2;;0|:VBUFSET||||0;6;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 119,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 120,
+                                                    "flex": 0.34,
+                                                    "group": 42,
+                                                    "items": [s1Editor("0;ITEM.TRENDFACTOR;\xd3\xf5\xed\xf4\xe5\xeb\xe5\xf3\xf4\xde\xf2 \xf4\xdc\xf3\xe7\xf2;;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 121,
+                                                    "flex": 0.34,
+                                                    "items": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 122,
+                                    "sid": "pg3pg2",
+                                    "title":"\xd0\xf1\xef\xf4\xe5\xe9\xed\xfc\xec\xe5\xed\xef\xe9 \xf7\xfe\xf1\xef\xe9 \xea\xe1\xe9 \xe8\xdd\xf3\xe5\xe9\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 123,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 124,
+                                                    "flex": 0.33,
+                                                    "group": 42,
+                                                    "items": [s1Editor("0;ITEM.MTRPLACE;\xd3\xf5\xed\xde\xe8\xe7\xf2 \xe8\xdd\xf3\xe7 \xe1\xf0\xef\xe8.;;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 125,
+                                                    "flex": 0.33,
+                                                    "items": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "index": 126,
+                    "sid": "pg4",
+                    "title":"\xc5\xec\xf0\xef\xf1\xdf\xe1",
+                    "items": [
+                        {
+                            "xtype": "s1cont",
+                            "index": 127,
+                            "items": [
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 128,
+                                    "flex": 0.50,
+                                    "title":"\xd4\xe9\xec\xdd\xf2 \xea\xe1\xe9 \xe5\xea\xf0\xf4\xfe\xf3\xe5\xe9\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 129,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 130,
+                                                    "flex": 0.50,
+                                                    "group": 41,
+                                                    "items": [s1Editor("0;ITEM.PRICEW;\xd7\xef\xed\xe4\xf1\xe9\xea\xde\xf2;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 131,
+                                                    "flex": 0.50,
+                                                    "group": 41,
+                                                    "items": [s1Editor("0;ITEM.MARKUPW;Markup \xf7\xef\xed\xe4\xf1\xe9\xea\xde\xf2;;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 132,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 133,
+                                                    "flex": 0.50,
+                                                    "group": 41,
+                                                    "items": [s1Editor("0;ITEM.PRICER;\xcb\xe9\xe1\xed\xe9\xea\xde\xf2;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 134,
+                                                    "flex": 0.50,
+                                                    "group": 41,
+                                                    "items": [s1Editor("0;ITEM.MARKUPR;Markup \xeb\xe9\xe1\xed\xe9\xea\xde\xf2;;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 135,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 136,
+                                                    "flex": 0.50,
+                                                    "group": 41,
+                                                    "items": [s1Editor("0;ITEM.SODISCOUNT;\xb8\xea\xf0\xf4\xf9\xf3\xe7 1 (%);;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 137,
+                                                    "flex": 0.50,
+                                                    "group": 41,
+                                                    "items": [s1Editor("0;ITEM.SODISCOUNT1;\xb8\xea\xf0\xf4\xf9\xf3\xe7 2 (%);;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 138,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 139,
+                                                    "flex": 0.50,
+                                                    "group": 41,
+                                                    "items": [s1Editor("0;ITEM.SODISCOUNT2;\xb8\xea\xf0\xf4\xf9\xf3\xe7 3 (%);;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 140,
+                                                    "flex": 0.50,
+                                                    "group": 41,
+                                                    "items": [s1Editor("0;ITEM.MINPRCMK;\xc5\xeb\xdc\xf7\xe9\xf3\xf4\xef \xcc.\xca. (%);;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 141,
+                                    "flex": 0.50,
+                                    "title":"\xc5\xec\xf0\xef\xf1\xe9\xea\xdd\xf2 \xf0\xef\xeb\xe9\xf4\xe9\xea\xdd\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 142,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 143,
+                                                    "flex": 0.99,
+                                                    "group": 41,
+                                                    "items": [s1Editor("2;ITEM.MTRPCATEGORY;\xd4\xe9\xec\xef\xeb.\xea\xe1\xf4\xe7\xe3\xef\xf1\xdf\xe1;;2|MTRPCATEGORY|MTRPCATEGORY||ISACTIVE=1|0;3;0;1;0;0;MTRPCATEGORY.MTRPCATEGORY|MTRPCATEGORY.NAME;;MTRPCATEGORY;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 144,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 145,
+                                                    "flex": 0.99,
+                                                    "group": 41,
+                                                    "items": [s1Editor("2;ITEM.COMMISION;\xca\xeb\xdc\xf3\xe7 \xf0\xf1\xef\xec\xde\xe8\xe5\xe9\xe1\xf2;;2|ITECOMMISION|COMMISION||ISACTIVE=1|0;2;0;1;0;0;ITECOMMISION.COMMISION|ITECOMMISION.NAME;;$ITECOMMISION;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 146,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 147,
+                                                    "flex": 0.99,
+                                                    "group": 41,
+                                                    "items": [s1Editor("3;ITEM.FROMVAL;\xd5\xf0\xef\xeb/\xf3\xec\xfc\xf2 \xe1\xf0\xfc \xe1\xee\xdf\xe1;;0=Default|1=\xd4\xe7\xf2 \xd0\xef\xf3\xfc\xf4\xe7\xf4\xe1\xf2|2=\xd4\xe7\xf2 \xd4\xe9\xec\xde\xf2|3=\xd4\xe7\xf2 \xb8\xea\xf0\xf4\xf9\xf3\xe7\xf2 1;2;0;1;1;0;;;1=\xd4\xe7\xf2 \xd0\xef\xf3\xfc\xf4\xe7\xf4\xe1\xf2;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 148,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 149,
+                                                    "flex": 0.99,
+                                                    "group": 41,
+                                                    "items": [s1Editor("5;ITEM.REMAINMODE;\xb8\xeb\xe5\xe3\xf7\xef\xf2 \xf5\xf0\xef\xeb\xef\xdf\xf0\xef\xf5;;5|$Y||||0;2;0;1;1;0;;;$Y;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1tabpanel",
+                            "index": 150,
+                            "items": [
+                                {
+                                    "index": 151,
+                                    "sid": "pg4pg1",
+                                    "title":"\xc5\xed\xe1\xeb\xeb\xe1\xea\xf4\xe9\xea\xdd\xf2 \xf4\xe9\xec\xdd\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 152,
+                                            "title":"\xd7\xef\xed\xe4\xf1\xe9\xea\xde\xf2",
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 153,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICEW01;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 154,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICEW02;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 155,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICEW03;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 156,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICEW04;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 157,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 158,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICEW05;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 159,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICEW06;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 160,
+                                                    "flex": 0.25,
+                                                    "items": []
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 161,
+                                                    "flex": 0.25,
+                                                    "items": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 162,
+                                            "title":"\xcb\xe9\xe1\xed\xe9\xea\xde\xf2",
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 163,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICER01;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 164,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICER02;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 165,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICER03;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 166,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICER04;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 167,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 168,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICER05;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 169,
+                                                    "flex": 0.25,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.PRICER06;;;0|:VBUFSET||||0;6;0;1;0;0;;;;2")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 170,
+                                                    "flex": 0.25,
+                                                    "items": []
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 171,
+                                                    "flex": 0.25,
+                                                    "items": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "index": 172,
+                                    "sid": "pg4pg2",
+                                    "title":"\xd4\xe9\xec\xdd\xf2 \xe1\xe3\xef\xf1\xdc\xf2 \xea\xe1\xf4\xdc \xf0\xf1\xef\xec\xe7\xe8\xe5\xf5\xf4\xde",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 173,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 174,
+                                                    "flex": 0.50,
+                                                    "group": 41,
+                                                    "items": [s1Editor("1;ITEM.MTRSUP;\xd3\xf5\xed\xde\xe8\xe7\xf2 \xf0\xf1\xef\xec/\xf4\xde\xf2;;1|SUPPLIER|TRDR|||0;3;0;1;0;0;ITEM.MTRSUP_SUPPLIER_CODE|ITEM.MTRSUP_SUPPLIER_NAME;;SUPPLIER;0")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 175,
+                                                    "flex": 0.50,
+                                                    "group": 41,
+                                                    "items": [s1Editor("1;ITEM.MTRSUPBRANCH;\xd5\xf0\xef\xea/\xec\xe1;;1|SUPBRANCH|TRDBRANCH||TRDR=[ITEM.MTRSUP]|4;3;0;1;0;0;ITEM.MTRSUPBRANCH_SUPBRANCH_CODE|ITEM.MTRSUPBRANCH_SUPBRANCH_NAME;;SUPBRANCH;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1detailgrid",
+                                            "index": 176,
+                                            "model": "MTRSUPPRCS",
+                                            "gridSelector": {
+                                                "editor": "SUPPLIER",
+                                                "fromField": "TRDR",
+                                                "toField": "MTRSUPPRCS.TRDR",
+                                                "filters": ""
+                                            },
+                                            "columns": [gridEditor("1;MTRSUPPRCS.TRDR_SUPPLIER_CODE;\xca\xf9\xe4\xe9\xea\xfc\xf2;;1|SUPPLIER|TRDR|||0;1;0;1;0;0;;MTRSUPPRCS.SOCURRENCY|SOCURRENCY;SUPPLIER;0"),gridEditor("1;MTRSUPPRCS.TRDR_SUPPLIER_NAME;\xc5\xf0\xf9\xed\xf5\xec\xdf\xe1;;1|SUPPLIER|TRDR|||0;1;0;1;0;0;;MTRSUPPRCS.SOCURRENCY|SOCURRENCY;SUPPLIER;0"),gridEditor("0;MTRSUPPRCS.MTRSUPCODE;\xca\xf9\xe4.\xe5\xdf\xe4\xef\xf5\xf2;;;1;0;1;0;0;;;;0"),gridEditor("11;MTRSUPPRCS.SUPDATE;\xc9\xf3\xf7\xfd\xe5\xe9 \xe5\xf9\xf2;;;11;0;1;0;0;;;;0"),gridEditor("0;MTRSUPPRCS.LASTPRICE;\xd4\xe5\xeb.\xf4\xe9\xec\xde \xe1\xe3\xef\xf1\xdc\xf2;;;6;0;1;0;1;;;;2"),gridEditor("0;MTRSUPPRCS.SUPPRICE;\xd4\xe9\xec\xde \xf3\xf5\xec\xf6\xf9\xed\xdf\xe1\xf2;;0|:VBUFSET||||0;6;0;1;0;0;;;;2"),gridEditor("0;MTRSUPPRCS.PARDAYS;\xc7\xec\xdd\xf1\xe5\xf2 \xf0\xe1\xf1\xdc\xe4\xef\xf3\xe7\xf2;;;2;0;1;0;0;;;;0")
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "index": 177,
+                    "sid": "pg5",
+                    "title":"\xcb\xef\xe3\xe9\xf3\xf4\xe9\xea\xdc",
+                    "items": [
+                        {
+                            "xtype": "s1cont",
+                            "index": 178,
+                            "items": [
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 179,
+                                    "flex": 0.50,
+                                    "title":"\xc2\xe1\xf3\xe9\xea\xdc \xf3\xf4\xef\xe9\xf7\xe5\xdf\xe1",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 180,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 181,
+                                                    "flex": 0.99,
+                                                    "group": 55,
+                                                    "items": [s1Editor("2;ITEM.VAT;\xd6.\xd0.\xc1.;;2|VAT|VAT||ISACTIVE=1|0;2;0;1;1;0;VAT.VAT|VAT.NAME;;VAT;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 182,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 183,
+                                                    "flex": 0.99,
+                                                    "group": 55,
+                                                    "items": [s1Editor("2;ITEM.MTRACN;\xcb\xef\xe3.\xea\xe1\xf4\xe7\xe3\xef\xf1\xdf\xe1;;2|ITEMGL|MTRACN||ISACTIVE=1|0;3;0;1;0;0;ITEMGL.MTRACN|ITEMGL.NAME;ITEM.MTRTYPE,ITEM.MTRTYPE1,ITEM.ACNMSK,ITEM.ACNMSK1,ITEM.ACNMSK2,ITEM.ACNMSK3,ITEM.ACNMSK4,ITEM.ACNMSK5,ITEM.ACNMSK6,ITEM.ACNMSKS,ITEM.ACNMSKX,ITEM.CRDCARDMODE,ITEM.MYDATACODE,ITEM.DISCOPTION,ITEM.NODISCOPTION|MTRTYPE,MTRTYPE1,ACNMSK01,ACNMSK02,ACNMSK03,ACNMSK04,ACNMSK05,ACNMSK06,ACNMSK07,ACNMSKS,ACNMSKX,CRDCARDMODE,MYDATACODE,DISCOPTION,NODISCOPTION;ITEMGL;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 184,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 185,
+                                                    "flex": 0.99,
+                                                    "group": 55,
+                                                    "items": [s1Editor("0;ITEM.ACNMSK9;\xd0\xf1\xfc\xe8\xe5\xec\xe1 \xeb\xef\xe3\xe1\xf1\xe9\xe1\xf3\xec\xef\xfd (94);;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 186,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 187,
+                                                    "flex": 0.99,
+                                                    "group": 55,
+                                                    "items": [s1Editor("3;ITEM.MTRTYPE;\xd4\xfd\xf0\xef\xf2;;0=\xca\xe1\xed\xef\xed\xe9\xea\xfc|3=\xc5\xe3\xe3\xf5\xef\xe4\xef\xf3\xdf\xe1|5=\xd4\xdd\xeb\xef\xf2 \xf0\xeb\xe1\xf3\xf4\xe9\xea\xde\xf2 \xf3\xe1\xea\xef\xfd\xeb\xe1\xf2|6=\xc5\xe9\xf3\xf6\xef\xf1\xdc \xf0\xf1\xef\xf3\xf4\xe1\xf3\xdf\xe1\xf2 \xf0\xe5\xf1\xe9\xe2\xdc\xeb\xeb\xef\xed\xf4\xef\xf2 (\xea\xf5\xf0\xe5\xeb\xdc\xea\xe9 \xe3\xe9\xe1 \xf0\xef\xf4\xdc)|7=\xc5\xe9\xf3\xf6\xef\xf1\xdc \xf0\xf1\xef\xf3\xf4\xe1\xf3\xdf\xe1\xf2 \xf0\xe5\xf1\xe9\xe2\xdc\xeb\xeb\xef\xed\xf4\xef\xf2 (\xea\xdc\xeb\xf5\xec\xec\xe1 / \xea\xe1\xf0\xdc\xea\xe9 \xea\xf5\xf0\xdd\xeb\xef\xf5)|8=\xc5\xe9\xf3\xf6\xef\xf1\xdc \xf0\xf1\xef\xf3\xf4\xe1\xf3\xdf\xe1\xf2 \xf0\xe5\xf1\xe9\xe2\xdc\xeb\xeb\xef\xed\xf4\xef\xf2 (\xf0\xe5\xf1\xe9\xdd\xea\xf4\xe7\xf2 \xf4\xf1\xef\xf6\xdf\xec\xf9\xed)|9=\xc5\xe9\xf3\xf6\xef\xf1\xdc \xf0\xf1\xef\xf3\xf4\xe1\xf3\xdf\xe1\xf2 \xf0\xe5\xf1\xe9\xe2\xdc\xeb\xeb\xef\xed\xf4\xef\xf2 (\xea\xdc\xeb\xf5\xec\xec\xe1 / \xea\xe1\xf0\xdc\xea\xe9 \xf0\xe5\xf1\xe9\xdd\xea\xf4\xe7 \xf4\xf1\xef\xf6\xdf\xec\xf9\xed)|10=\xd4\xdd\xeb\xef\xf2 \xe1\xed\xe1\xea\xfd\xea\xeb\xf9\xf3\xe7\xf2 \xe3\xe9\xe1 \xf0\xf1\xef\xfa\xfc\xed\xf4\xe1 \xec\xe5 PVC;2;0;1;1;0;;;3=\xc5\xe3\xe3\xf5\xef\xe4\xef\xf3\xdf\xe1;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 188,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 189,
+                                                    "flex": 0.99,
+                                                    "group": 55,
+                                                    "items": [s1Editor("5;ITEM.KEPYO;\xd3\xf5\xec.\xf3\xe5 \xca\xc5.\xd0.\xd5.\xcf. / \xcc\xd5\xd6;;5|$Y||||0;2;0;1;1;0;;;$Y;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 190,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 191,
+                                                    "flex": 0.99,
+                                                    "group": 55,
+                                                    "items": [s1Editor("1;ITEM.KADTAXIS;\xca.\xc1.\xc4. (TAXIS);;1|KADTAXIS|KADTAXIS|||0;3;0;1;0;0;ITEM.KADTAXIS_KADTAXIS_CODE|ITEM.KADTAXIS_KADTAXIS_NAME;;KADTAXIS;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 192,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 193,
+                                                    "flex": 0.99,
+                                                    "group": 55,
+                                                    "items": [s1Editor("3;ITEM.MYDATACODE;\xca\xe1\xf4\xe7\xe3\xef\xf1\xdf\xe1 myDATA;;1=\xc5\xec\xf0\xef\xf1\xe5\xfd\xec\xe1\xf4\xe1|2=\xd0\xf1\xfe\xf4\xe5\xf2 \xfd\xeb\xe5\xf2 & \xf5\xeb\xe9\xea\xdc ( \xc2\xe9\xef\xec\xe7\xf7\xe1\xed\xdf\xe1 )|3=\xd0\xf1\xfe\xf4\xe5\xf2 \xfd\xeb\xe5\xf2 & \xf5\xeb\xe9\xea\xdc ( \xc1\xe3\xf1\xef\xf4\xe9\xea\xde )|4=\xd0\xf1\xef\xfa\xfc\xed\xf4\xe1|5=\xd0\xf1\xef\xfa\xfc\xed\xf4\xe1 \xf4\xf1\xdf\xf4\xf9\xed|6=\xc6\xfe\xe1 & \xd6\xf5\xf4\xdc ( \xc1\xe3\xf1\xef\xf4\xe9\xea\xde )|7=\xd5\xf0\xe7\xf1\xe5\xf3\xdf\xe5\xf2|8=\xcb\xef\xe9\xf0\xdc \xf3\xf5\xed\xde\xe8\xe7 \xdd\xf3\xef\xe4\xe1 / \xdd\xee\xef\xe4\xe1|9=\xc5\xed\xf3\xfe\xec\xe1\xf4\xe1 \xf0\xdc\xe3\xe9\xe1|10=\xcc\xe7 \xe5\xed\xf3\xfe\xec\xe1\xf4\xe1 \xf0\xdc\xe3\xe9\xe1|11=\xcb\xef\xe9\xf0\xdc \xe5\xec\xf0\xef\xf1\xe5\xfd\xec\xe1\xf4\xe1|12=\xcb\xef\xe9\xf0\xdc \xf0\xf1\xef\xfa\xfc\xed\xf4\xe1|13=\xcb\xef\xe9\xf0\xdd\xf2 \xf5\xf0\xe7\xf1\xe5\xf3\xdf\xe5\xf2|14=\xcb\xef\xe9\xf0\xdd\xf2 \xf0\xf1\xfe\xf4\xe5\xf2 \xfd\xeb\xe5\xf2 & \xf5\xeb\xe9\xea\xdc ( \xc2\xe9\xef\xec\xe7\xf7\xe1\xed\xdf\xe1 )|15=\xcb\xef\xe9\xf0\xdd\xf2 \xf0\xf1\xfe\xf4\xe5\xf2 \xfd\xeb\xe5\xf2 & \xf5\xeb\xe9\xea\xdc ( \xc1\xe3\xf1\xef\xf4\xe9\xea\xde )|16=\xcb\xef\xe9\xf0\xdc \xc6\xfe\xe1 & \xd6\xf5\xf4\xdc ( \xc1\xe3\xf1\xef\xf4\xe9\xea\xde )|17=\xcb\xef\xe9\xf0\xdc \xf0\xeb\xe7\xf1\xef\xf6\xef\xf1\xe9\xe1\xea\xdc \xf3\xf4\xef\xe9\xf7\xe5\xdf\xe1 \xe5\xf3\xfc\xe4\xf9\xed/\xe5\xee\xfc\xe4\xf9\xed|18=\xd0\xe9\xf3\xf4\xf9\xf4\xe9\xea\xfc \xdd\xea\xf0\xf4\xf9\xf3\xe7\xf2 \xd6.\xd0.\xc1.|19=\xc1\xf3\xf5\xed\xde\xe8\xe7 \xdd\xf3\xef\xe4\xe1 \xea\xe1\xe9 \xea\xdd\xf1\xe4\xe7;2;0;1;0;0;;;2=\xd0\xf1\xfe\xf4\xe5\xf2 \xfd\xeb\xe5\xf2  \xf5\xeb\xe9\xea\xdc ( \xc2\xe9\xef\xec\xe7\xf7\xe1\xed\xdf\xe1 );0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 194,
+                                    "flex": 0.50,
+                                    "title":"\xc4\xe9\xe5\xe8\xed\xe5\xdf\xf2, \xf0\xf1\xfc\xf4\xf5\xf0\xef \xea\xfc\xf3\xf4\xef\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 195,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 196,
+                                                    "flex": 0.99,
+                                                    "group": 40,
+                                                    "items": [s1Editor("2;ITEEXTRA.CPVCODE;\xca\xf9\xe4\xe9\xea\xfc\xf2 CPV;;2|CPVCODES|SAFTTAX||ISACTIVE=1|0;3;0;1;0;0;CPVCODES.SAFTTAX|CPVCODES.NAME;;$CPVCODES;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 197,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 198,
+                                                    "flex": 0.99,
+                                                    "items": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 199,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 200,
+                                                    "flex": 0.99,
+                                                    "group": 40,
+                                                    "items": [s1Editor("0;ITEM.STANDCOST;\xd0\xf1\xfc\xf4\xf5\xf0\xef \xea\xfc\xf3\xf4\xef\xf2;;;6;0;1;0;0;;;;7")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 201,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 202,
+                                                    "flex": 0.99,
+                                                    "items": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 203,
+                            "title":"\xc5\xe9\xe4\xe9\xea\xef\xdf \xea\xeb\xdc\xe4\xef\xe9",
+                            "items": [
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 204,
+                                    "flex": 0.50,
+                                    "group": 55,
+                                    "items": [s1Editor("3;ITEM.CRDCARDMODE;\xc5\xe9\xe4\xe9\xea\xde \xe4\xe9\xe1\xf7\xe5\xdf\xf1\xe9\xf3\xe7;;0=\xca\xe1\xec\xdf\xe1|1=\xca\xdc\xf1\xf4\xe1 \xea\xe9\xed\xe7\xf4\xde\xf2|2=\xc4\xf9\xf1\xef\xe5\xf0\xe9\xf4\xe1\xe3\xde|1000=\xd0\xf1\xef\xec\xde\xe8\xe5\xe9\xe1 \xe4\xe9\xe1\xf4\xe1\xea\xf4\xe9\xea\xfe\xed \xf3\xdf\xf4\xe9\xf3\xe7\xf2|1001=\xd0\xe9\xf3\xf4\xf9\xf4\xe9\xea\xfc \xdd\xea\xf0\xf4\xf9\xf3\xe7\xf2 \xd6.\xd0.\xc1.|13=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 2 \xea\xe1\xe9 3 \xd6\xd0\xc1|14=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 5 \xd6\xd0\xc1|29=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 6 \xd6\xd0\xc1|15=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 13 \xd6\xd0\xc1|9=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 14 \xd6\xd0\xc1|17=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 16 \xd6\xd0\xc1|18=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 19 \xd6\xd0\xc1|10=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 22 \xd6\xd0\xc1|7=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 24 \xd6\xd0\xc1|8=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 25 \xd6\xd0\xc1|19=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 26 \xd6\xd0\xc1|20=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 27 \xd6\xd0\xc1|21=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 27 \xd6\xd0\xc1 (\xd0\xeb\xef\xdf\xe1 \xc1\xed\xef\xe9\xea\xf4\xde\xf2 \xc8\xe1\xeb\xdc\xf3\xf3\xe7\xf2)|22=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 27.1.\xe3 \xd6\xd0\xc1 (\xd0\xeb\xef\xdf\xe1 \xc1\xed\xef\xe9\xea\xf4\xde\xf2 \xc8\xe1\xeb\xdc\xf3\xf3\xe7\xf2)|23=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 28 \xd6\xd0\xc1|24=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 39 \xd6\xd0\xc1|3=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xef \xdc\xf1\xe8\xf1\xef\xf5 39\xe1 \xd6\xd0\xc1 (\xd0\xf1\xef\xfa\xfc\xed \xf4\xe5\xf7\xed\xef\xeb\xef\xe3\xdf\xe1\xf2)|16=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xef \xdc\xf1\xe8\xf1\xef\xf5 39 \xd6\xd0\xc1 (\xc1\xed\xe1\xea\xf5\xea\xeb\xfe\xf3\xe9\xec\xe1 \xf5\xeb\xe9\xea\xdc)|25=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 40 \xd6\xd0\xc1|26=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 41 \xd6\xd0\xc1|11=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 43 \xd6\xd0\xc1|6=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 44 \xd6\xd0\xc1 (\xca\xe1\xf0\xed\xe9\xea\xdc \xf0\xf1\xef\xfa\xfc\xed\xf4\xe1)|12=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 45 \xd6\xd0\xc1|28=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 46 \xd6\xd0\xc1|27=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 47 \xd6\xd0\xc1|30=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xd0\xcf\xcb.1029/1995|31=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xd0\xcf\xcb.1167/2015|32=\xcb\xef\xe9\xf0\xdd\xf2 \xc5\xee\xe1\xe9\xf1\xdd\xf3\xe5\xe9\xf2 \xd6\xd0\xc1|33=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 24 \xf0\xe5\xf1. \xe2\' \xf0\xe1\xf1.1 \xf4\xef\xf5 \xca\xfe\xe4\xe9\xea\xe1 \xd6\xd0\xc1, (Tax Free)|34=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 47\xe2 \xf4\xef\xf5 \xca\xfe\xe4\xe9\xea\xe1 \xd6\xd0\xc1 (OSS \xec\xe7 \xe5\xed\xf9\xf3\xe9\xe1\xea\xfc \xea\xe1\xe8\xe5\xf3\xf4\xfe\xf2)|35=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 47\xe3 \xf4\xef\xf5 \xca\xfe\xe4\xe9\xea\xe1 \xd6\xd0\xc1 (OSS \xe5\xed\xf9\xf3\xe9\xe1\xea\xfc \xea\xe1\xe8\xe5\xf3\xf4\xfe\xf2)|36=\xc1\xf0\xe1\xeb\xeb\xe1\xf3\xf3\xfc\xec\xe5\xed\xe1 \xdc\xf1\xe8\xf1\xef\xf5 47\xe4 \xf4\xef\xf5 \xca\xfe\xe4\xe9\xea\xe1 \xd6\xd0\xc1 (IOSS);2;0;1;1;0;;;1=\xca\xdc\xf1\xf4\xe1 \xea\xe9\xed\xe7\xf4\xde\xf2;0")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 205,
+                                    "flex": 0.50,
+                                    "group": 55,
+                                    "items": [s1Editor("3;ITEM.DISCOPTION;\xd6.\xd0.\xc1. \xe5\xea\xf1\xef\xfe\xed;;0=\xd7\xf9\xf1\xdf\xf2 \xe4\xe9\xea\xe1\xdf\xf9\xec\xe1 \xdd\xea\xf0\xf4\xf9\xf3\xe7\xf2|1=\xcc\xe5 \xe4\xe9\xea\xe1\xdf\xf9\xec\xe1 \xdd\xea\xf0\xf4\xf9\xf3\xe7\xf2;2;0;1;0;0;;;1=\xcc\xe5 \xe4\xe9\xea\xe1\xdf\xf9\xec\xe1 \xdd\xea\xf0\xf4\xf9\xf3\xe7\xf2;0")
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 206,
+                            "items": [
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 207,
+                                    "flex": 0.50,
+                                    "group": 55,
+                                    "items": [s1Editor("3;ITEM.NODISCOPTION;\xd6.\xd0.\xc1. \xe5\xe9\xf3\xf1\xef\xfe\xed;;0=\xd7\xf9\xf1\xdf\xf2 \xe4\xe9\xea\xe1\xdf\xf9\xec\xe1 \xdd\xea\xf0\xf4\xf9\xf3\xe7\xf2|1=\xcc\xe5 \xe4\xe9\xea\xe1\xdf\xf9\xec\xe1 \xdd\xea\xf0\xf4\xf9\xf3\xe7\xf2;2;0;1;0;0;;;1=\xcc\xe5 \xe4\xe9\xea\xe1\xdf\xf9\xec\xe1 \xdd\xea\xf0\xf4\xf9\xf3\xe7\xf2;0")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 208,
+                                    "flex": 0.50,
+                                    "group": 55,
+                                    "items": [s1Editor("3;ITEM.MTRGASTYPE;\xd4\xfd\xf0\xef\xf2 \xea\xe1\xf5\xf3\xdf\xec\xef\xf5;;0=\xca\xef\xe9\xed\xfc \xe5\xdf\xe4\xef\xf2|110=\xc2enzine 95RON|111=Benzine 95RON+ |112=Benzine 100 RON|113=Benzine L.R.P.|114=\xc2\xe5\xed\xe6\xdf\xed\xe7 \xe1\xe5\xf1\xef\xf0\xeb\xdc\xed\xf9\xed|115=\xc5\xe9\xe4\xe9\xea\xfc \xea\xe1\xfd\xf3\xe9\xec\xef \xe1\xe5\xf1\xe9\xf9\xe8\xef\xf5\xec\xdd\xed\xf9\xed|120=Diesel \xea\xdf\xed\xe7\xf3\xe7\xf2|121=Diesel \xea\xdf\xed\xe7\xf3\xe7\xf2 premium|1=Diesel Heating  (\xd0\xe5\xf4\xf1\xdd\xeb\xe1\xe9\xef \xe8\xdd\xf1\xec\xe1\xed\xf3\xe7\xf2)|131=Diesel Heating premium|2=Diesel Light (\xd6\xf9\xf4\xe9\xf3\xf4\xe9\xea\xfc \xf0\xe5\xf4\xf1\xdd\xeb\xe1\xe9\xef)|133=Diesel \xdc\xeb\xeb\xf9\xed \xf7\xf1\xde\xf3\xe5\xf9\xed|134=Diesel \xed\xe1\xf5\xf4\xe9\xeb\xdf\xe1\xf2|135=\xca\xe7\xf1\xef\xe6\xdf\xed\xe7 JP1|136=\xca\xe7\xf1\xef\xe6\xdf\xed\xe7 \xdc\xeb\xeb\xf9\xed \xf7\xf1\xde\xf3\xe5\xf9\xed|137=\xcc\xe1\xe6\xef\xfd\xf4|138=\xcc\xe1\xe6\xef\xfd\xf4 \xcd\xe1\xf5\xf4\xe9\xeb\xdf\xe1\xf2|140=\xd5\xe3\xf1\xe1\xdd\xf1\xe9\xef (LPG) \xea\xdf\xed\xe7\xf3\xe7\xf2|141=\xd5\xe3\xf1\xe1\xdd\xf1\xe9\xef \xea\xe1\xe9 \xec\xe5\xe8\xdc\xed\xe9\xef \xe2\xe9\xef\xec\xe7\xf7\xe1\xed\xe9\xea\xfc/\xe5\xec\xf0\xef\xf1\xe9\xea\xfc \xea\xe9\xed\xe7\xf4\xde\xf1\xf9\xed (\xf7\xfd\xe4\xe7\xed)|142=\xd5\xe3\xf1\xe1\xdd\xf1\xe9\xef (LPG) \xea\xe1\xe9 \xec\xe5\xe8\xdc\xed\xe9\xef \xe8\xdd\xf1\xec\xe1\xed\xf3\xe7\xf2 \xea\xe1\xe9 \xeb\xef\xe9\xf0\xfe\xed \xf7\xf1\xde\xf3\xe5\xf9\xed (\xf7\xfd\xe4\xe7\xed)|143=\xd5\xe3\xf1\xe1\xdd\xf1\xe9\xef \xea\xe1\xe9 \xec\xe5\xe8\xdc\xed\xe9\xef \xe2\xe9\xef\xec\xe7\xf7\xe1\xed\xe9\xea\xfc/\xe5\xec\xf0\xef\xf1\xe9\xea\xfc \xea\xe9\xed\xe7\xf4\xde\xf1\xf9\xed (\xf3\xe5 \xf6\xe9\xdc\xeb\xe5\xf2)|144=\xd5\xe3\xf1\xe1\xdd\xf1\xe9\xef (LPG) \xea\xe1\xe9 \xec\xe5\xe8\xdc\xed\xe9\xef \xe8\xdd\xf1\xec\xe1\xed\xf3\xe7\xf2 \xea\xe1\xe9 \xeb\xef\xe9\xf0\xfe\xed \xf7\xf1\xde\xf3\xe5\xf9\xed (\xf3\xe5 \xf6\xe9\xdc\xeb\xe5\xf2,\xf6\xe9\xe1\xeb\xdf\xe4\xe9\xe1)|150=CNG (\xf0\xe5\xf0\xe9\xe5\xf3\xec\xdd\xed\xef \xf6\xf5\xf3\xe9\xea\xfc \xe1\xdd\xf1\xe9\xef)|160=\xc1\xf1\xf9\xec\xe1\xf4\xe9\xea\xef\xdf \xd5\xe4\xf1\xef\xe3\xef\xed\xdc\xed\xe8\xf1\xe1\xea\xe5\xf2 \xc4\xe1\xf3\xec\xef\xeb\xef\xe3\xe9\xea\xde\xf2 \xca\xeb\xdc\xf3\xe7\xf2 2707|161=\xca\xf5\xea\xeb\xe9\xea\xef\xdf \xd5\xe4\xf1\xef\xe3\xef\xed\xdc\xed\xe8\xf1\xe1\xea\xe5\xf2 \xc4\xe1\xf3\xec\xef\xeb\xef\xe3\xe9\xea\xde\xf2 \xca\xeb\xdc\xf3\xe7\xf2 2902|170=\xc5\xeb\xe1\xf6\xf1\xfd \xf0\xe5\xf4\xf1\xdd\xeb\xe1\xe9\xef|171=\xc5\xeb\xe1\xf6\xf1\xdc \xeb\xdc\xe4\xe9\xe1|172=\xc2\xe9\xef\xed\xf4\xdf\xe6\xe5\xeb|1099=\xcb\xef\xe9\xf0\xdd\xf2 \xf7\xf1\xe5\xfe\xf3\xe5\xe9\xf2 \xf5\xf0\xe7\xf1\xe5\xf3\xe9\xfe\xed ( \xea\xe1\xf5\xf3\xdf\xec\xf9\xed- \xe4\xe9\xf5\xeb\xe9\xf3\xf4\xe7\xf1\xdf\xf9\xed );2;0;1;1;0;;;110=\xc2enzine 95RON;0")
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 209,
+                            "items": [
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 210,
+                                    "flex": 0.50,
+                                    "group": 55,
+                                    "items": [s1Editor("2;ITEM.SOCLMNS1;\xd3\xf4\xde\xeb\xe7 \xe2\xe9\xe2\xeb\xdf\xef\xf5 \xef\xe9\xea.;;2|BLDSOCLMNS|SOCLMNS||ISACTIVE=1|0;2;0;1;0;0;BLDSOCLMNS.SOCLMNS|BLDSOCLMNS.NAME;;$BLDSOCLMNS;0")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 211,
+                                    "flex": 0.50,
+                                    "group": 55,
+                                    "items": [s1Editor("2;ITEM.MTRPRJCBLD;\xc4\xe1\xf0\xdc\xed\xe7 \xef\xe9\xea\xef\xe4\xef\xec\xde\xf2;;2|MTRPRJCBLD|MTRPRJCBLD||ISACTIVE=1|0;2;0;1;0;0;MTRPRJCBLD.MTRPRJCBLD|MTRPRJCBLD.NAME;;$MTRPRJCBLD;0")
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 212,
+                            "items": [
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 213,
+                                    "flex": 0.50,
+                                    "title":"\xcb\xef\xe3\xe1\xf1\xe9\xe1\xf3\xec\xef\xdf \xeb\xef\xe3\xe9\xf3\xf4\xe9\xea\xde\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 214,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 215,
+                                                    "flex": 0.50,
+                                                    "group": 55,
+                                                    "items": [s1Editor("1;ITEM.ACNMSK;\xc1\xe3\xef\xf1\xfe\xed;;1|ACNTGL|CODE||ISACTIVE=1 AND ACNSCHEMA=\':X.SYS.ACNSCHEMA\'  AND SODTYPE=89|5;1;1;1;0;0;;;ACNTGL;0")
+                                                    ]
+                                                },
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 216,
+                                                    "flex": 0.50,
+                                                    "group": 55,
+                                                    "items": [s1Editor("1;ITEM.ACNMSK1;\xd0\xf9\xeb\xde\xf3\xe5\xf9\xed;;1|ACNTGL|CODE||ISACTIVE=1 AND ACNSCHEMA=\':X.SYS.ACNSCHEMA\'  AND SODTYPE=89|5;1;1;1;0;0;;;ACNTGL;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 217,
+                                    "flex": 0.50,
+                                    "title":"\xcb\xef\xe3\xe1\xf1\xe9\xe1\xf3\xec\xef\xdf \xe5\xf3\xfc\xe4\xf9\xed \xe5\xee\xfc\xe4\xf9\xed",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 218,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 219,
+                                                    "flex": 0.99,
+                                                    "group": 59,
+                                                    "items": [s1Editor("1;ITEM.ACNMSKX;\xc5\xee\xfc\xe4\xf9\xed;;1|SXACNT|CODE||(A.MTRTYPE IN (2,4)) AND ISACTIVE=1|1;1;1;1;0;0;;;SXACNT;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 220,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 221,
+                                                    "flex": 0.99,
+                                                    "group": 59,
+                                                    "items": [s1Editor("1;ITEM.ACNMSKS;\xc5\xf3\xfc\xe4\xf9\xed;;1|SXACNT|CODE||(A.MTRTYPE IN (1,3)) AND ISACTIVE=1|1;1;1;1;0;0;;;SXACNT;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 222,
+                            "items": []
+                        }
+                    ]
+                },
+                {
+                    "index": 223,
+                    "sid": "pg6",
+                    "title":"\xc9\xe4\xe9\xfc\xf4\xe7\xf4\xe5\xf2",
+                    "items": [
+                        {
+                            "xtype": "s1cont",
+                            "index": 224,
+                            "items": [
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 225,
+                                    "flex": 0.50,
+                                    "title":"Serial numbers, \xe5\xe3\xe3\xf5\xde\xf3\xe5\xe9\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 226,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 227,
+                                                    "flex": 0.99,
+                                                    "group": 18,
+                                                    "items": [s1Editor("0;ITEM.GUARTIME;\xc5\xe3\xe3\xfd\xe7\xf3\xe7 (\xec\xde\xed\xe5\xf2);;;2;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 228,
+                            "title":"Groups sets (\xf3\xfd\xed\xe8\xe5\xf4\xe1 \xe5\xdf\xe4\xe7)",
+                            "items": [
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 229,
+                                    "flex": 0.50,
+                                    "group": 18,
+                                    "items": [s1Editor("1;ITEM.SETITEM;\xd3\xfd\xed\xe8\xe5\xf3\xe7;;1|MTRCOMMENTS|NAME||ISACTIVE=1 AND SODTYPE=51|5;1;1;1;0;0;;;$MTRCOMMENTS;0")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 230,
+                                    "flex": 0.50,
+                                    "items": []
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 231,
+                            "items": []
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 232,
+                            "items": []
+                        }
+                    ]
+                },
+                {
+                    "index": 233,
+                    "sid": "Page12",
+                    "title":"\xc5\xf0\xe9\xf0\xeb\xdd\xef\xed \xf7\xe1\xf1\xe1\xea\xf4\xe7\xf1\xe9\xf3\xf4\xe9\xea\xdc",
+                    "items": [
+                        {
+                            "xtype": "s1cont",
+                            "index": 234,
+                            "items": [
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 235,
+                                    "flex": 0.20,
+                                    "group": 0,
+                                    "items": [s1Editor("106;ITEEXTRA.SOESHOP;\xc5\xed\xe5\xf1\xe3\xfc \xf3\xe5 e-Shop;;2=Shopify|3=ShopranosB2B|4=ShopranosB2C|99=\xa2\xeb\xeb\xef;1;0;1;0;0;;;3=ShopranosB2B;0")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 236,
+                                    "flex": 0.40,
+                                    "group": 0,
+                                    "items": [s1Editor("2;ITEEXTRA.MTRATTRIBUTEG;\xcf\xec\xdc\xe4\xe1 \xf7\xe1\xf1\xe1\xea\xf4\xe7\xf1\xe9\xf3\xf4\xe9\xea\xfe\xed;;2|MTRATTRIBUTEG|MTRATTRIBUTEG||ISACTIVE=1|0;3;0;1;0;0;MTRATTRIBUTEG.CODE|MTRATTRIBUTEG.NAME;;MTRATTRIBUTEG;0")
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1fields",
+                                    "index": 237,
+                                    "flex": 0.30,
+                                    "items": []
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1detailgrid",
+                            "index": 238,
+                            "model": "MTRLATTRIBUTES",
+                            "gridSelector": {
+                                "editor": "MTRATTRIBUTE",
+                                "fromField": "MTRATTRIBUTE",
+                                "toField": "MTRLATTRIBUTES.MTRATTRIBUTE",
+                                "filters": ""
+                            },
+                            "columns": [gridEditor("1;MTRLATTRIBUTES.MTRATTRIBUTE_MTRATTRIBUTE_CODE;\xca\xf9\xe4\xe9\xea\xfc\xf2;;1|MTRATTRIBUTE|MTRATTRIBUTE|||0;1;0;1;0;0;;;MTRATTRIBUTE;0"),gridEditor("1;MTRLATTRIBUTES.MTRATTRIBUTE_MTRATTRIBUTE_NAME;\xd0\xe5\xf1\xe9\xe3\xf1\xe1\xf6\xde;;1|MTRATTRIBUTE|MTRATTRIBUTE|||0;1;0;1;0;0;;;MTRATTRIBUTE;0"),gridEditor("1;MTRLATTRIBUTES.MTRATTRIBUTELN_MTRATTRIBUTELN_SOVALUE;\xd4\xe9\xec\xde;;1|MTRATTRIBUTELN|MTRATTRIBUTELN||MTRATTRIBUTE=[MTRLATTRIBUTES.MTRATTRIBUTE]|4;1;0;1;0;0;;;MTRATTRIBUTELN;0"),gridEditor("0;MTRLATTRIBUTES.SOVALUE;\xc5\xed\xe1\xeb\xeb\xe1\xea\xf4\xe9\xea\xde \xf4\xe9\xec\xde;;;1;0;1;0;0;;;;0"),gridEditor("5;MTRLATTRIBUTES.ISACTIVE;\xc5\xed\xe5\xf1\xe3\xfc;;5|$Y||||0;2;0;1;1;0;;;$Y;0")
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "index": 239,
+                    "sid": "pg7",
+                    "title":"\xc5\xeb\xe5\xfd\xe8\xe5\xf1\xe1 \xf0\xe5\xe4\xdf\xe1",
+                    "items": [
+                        {
+                            "xtype": "s1cont",
+                            "index": 240,
+                            "items": [
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 241,
+                                    "flex": 0.50,
+                                    "title":"\xca\xe5\xdf\xec\xe5\xed\xe1",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 242,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 243,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("0;ITEEXTRA.VARCHAR01;HEX Colour Code;;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 244,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 245,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("0;ITEEXTRA.VARCHAR02;\xca\xe5\xdf\xec\xe5\xed\xef 2;;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 246,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 247,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("0;ITEEXTRA.VARCHAR03;\xca\xe5\xdf\xec\xe5\xed\xef 3;;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 248,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 249,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("0;ITEEXTRA.VARCHAR04;\xca\xe5\xdf\xec\xe5\xed\xef 4;;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 250,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 251,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("0;ITEEXTRA.VARCHAR05;\xca\xe5\xdf\xec\xe5\xed\xef 5;;;1;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 252,
+                                    "flex": 0.50,
+                                    "title":"\xd0\xdf\xed\xe1\xea\xe5\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 253,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 254,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("2;ITEEXTRA.UTBL01;\xd7\xe1\xf1\xe1\xea\xf4\xe7\xf1\xe9\xf3\xf4\xe9\xea\xdc;;2|UTBL01|UTBL01||ISACTIVE=1 AND SODTYPE=51|8196;2;0;1;0;0;UTBL01.UTBL01|UTBL01.NAME;;$UTBL01;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 255,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 256,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("2;ITEEXTRA.UTBL02;\xc2\xdc\xf1\xef\xf2;;2|UTBL02|UTBL02||ISACTIVE=1 AND SODTYPE=51|8196;2;0;1;0;0;UTBL02.UTBL02|UTBL02.NAME;;$UTBL02;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 257,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 258,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("2;ITEEXTRA.UTBL03;\xd7\xf1\xfe\xec\xe1;;2|UTBL03|UTBL03||ISACTIVE=1 AND SODTYPE=51|8196;2;0;1;0;0;UTBL03.UTBL03|UTBL03.NAME;;$UTBL03;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 259,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 260,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("2;ITEEXTRA.UTBL04;\xc4\xe9\xe1\xe8\xe5\xf3\xe9\xec\xfc\xf4\xe7\xf4\xe1;;2|UTBL04|UTBL04||ISACTIVE=1 AND SODTYPE=51|8196;2;0;1;0;0;UTBL04.UTBL04|UTBL04.NAME;;$UTBL04;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 261,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 262,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("2;ITEEXTRA.UTBL05;\xd7\xf1\xf9\xec\xe1\xf4. \xd0\xe1\xeb\xdd\xf4\xe1;;2|UTBL05|UTBL05||ISACTIVE=1 AND SODTYPE=51|8196;2;0;1;0;0;UTBL05.UTBL05|UTBL05.NAME;;$UTBL05;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 263,
+                            "items": [
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 264,
+                                    "flex": 0.50,
+                                    "title":"\xc1\xf1\xe9\xe8\xec\xef\xdf",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 265,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 266,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("0;ITEEXTRA.NUM01;\xd4\xe9\xec\xde \xe1\xe3\xef\xf1\xdc\xf2;;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 267,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 268,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("0;ITEEXTRA.NUM02;\xc1\xf1\xe9\xe8\xec\xfc\xf2 2;;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 269,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 270,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("0;ITEEXTRA.NUM03;\xc1\xf1\xe9\xe8\xec\xfc\xf2 3;;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 271,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 272,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("0;ITEEXTRA.NUM04;\xc1\xf1\xe9\xe8\xec\xfc\xf2 4;;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 273,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 274,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("0;ITEEXTRA.NUM05;\xc1\xf1\xe9\xe8\xec\xfc\xf2 5;;;6;0;1;0;0;;;;2")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 275,
+                                    "flex": 0.50,
+                                    "title":"\xcd\xe1\xe9/\xbc\xf7\xe9",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 276,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 277,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("5;ITEEXTRA.BOOL01;\xcd\xe1\xdf/\xcf\xf7\xe9 1;;5|$Y||||8192;2;0;1;1;0;;;$Y;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 278,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 279,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("5;ITEEXTRA.BOOL02;\xcd\xe1\xdf/\xcf\xf7\xe9 2;;5|$Y||||8192;2;0;1;1;0;;;$Y;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 280,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 281,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("5;ITEEXTRA.BOOL03;\xcd\xe1\xdf/\xcf\xf7\xe9 3;;5|$Y||||8192;2;0;1;1;0;;;$Y;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 282,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 283,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("5;ITEEXTRA.BOOL04;\xcd\xe1\xdf/\xcf\xf7\xe9 4;;5|$Y||||8192;2;0;1;1;0;;;$Y;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 284,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 285,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("5;ITEEXTRA.BOOL04;\xcd\xe1\xdf/\xcf\xf7\xe9 4;;5|$Y||||8192;2;0;0;1;0;;;$Y;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "xtype": "s1panel",
+                                    "index": 286,
+                                    "flex": 0.50,
+                                    "title":"\xc7\xec\xe5\xf1\xef\xec\xe7\xed\xdf\xe5\xf2",
+                                    "items": [
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 287,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 288,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("11;ITEEXTRA.DATE01;\xc7\xec\xe5\xf1\xef\xec\xe7\xed\xdf\xe1 1;;;11;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 289,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 290,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("11;ITEEXTRA.DATE02;\xc7\xec\xe5\xf1\xef\xec\xe7\xed\xdf\xe1 2;;;11;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 291,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 292,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("11;ITEEXTRA.DATE03;\xc7\xec\xe5\xf1\xef\xec\xe7\xed\xdf\xe1 3;;;11;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 293,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 294,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("11;ITEEXTRA.DATE04;\xc7\xec\xe5\xf1\xef\xec\xe7\xed\xdf\xe1 4;;;11;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "xtype": "s1cont",
+                                            "index": 295,
+                                            "items": [
+                                                {
+                                                    "xtype": "s1fields",
+                                                    "index": 296,
+                                                    "flex": 0.99,
+                                                    "group": 0,
+                                                    "items": [s1Editor("11;ITEEXTRA.DATE05;\xc7\xec\xe5\xf1\xef\xec\xe7\xed\xdf\xe1 5;;;11;0;1;0;0;;;;0")
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1cont",
+                            "index": 297,
+                            "items": []
+                        }
+                    ]
+                },
+                {
+                    "index": 298,
+                    "sid": "pg9",
+                    "title":"\'\xc5\xe3\xe3\xf1\xe1\xf6\xe1/\xd0\xe1\xf1\xe1\xf4\xe7\xf1\xde\xf3\xe5\xe9\xf2",
+                    "items": [
+                        {
+                            "xtype": "container",
+                            "index": 299,
+                            "items": [
+                                {
+                                    "xtype": "s1reldocs",
+                                    "index": 301,
+                                    "flex": 0.50,
+                                    "items": [s1Editor("0;XTRDOCDATA.SOFNAME;\xbc\xed\xef\xec\xe1 \xe1\xf1\xf7\xe5\xdf\xef\xf5;;;1;0;1;0;0;;;;0")
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "xtype": "s1textarea",
+                            "index": 303,
+                            "flex": 0.50,
+                            "items": [s1Editor("0;ITEM.REMARKS;\xd0\xe1\xf1\xe1\xf4\xe7\xf1\xde\xf3\xe5\xe9\xf2;;;1;0;1;0;0;;;;0")
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "extrainfo": {},
+    "calculate": []
+}

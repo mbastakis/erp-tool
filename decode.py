@@ -1,4 +1,4 @@
-byte_string = b'\xc2\xc1\xd3\xc9\xcb\xc7\xd3 \xca\xc1\xcb\xc1\xd4\xc6\xc7\xd3'
+byte_string = b'\xcc.\xcc'
 
 # Attempt to decode using 'ISO-8859-7'
 try:
