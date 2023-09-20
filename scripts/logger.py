@@ -7,6 +7,10 @@ class Logger:
         self.sup_name = sup_name
         self.datetime_str = datetime.now().strftime("%d-%m-%Y--%H-%M-%S")
 
+        # Check if output/ folder exists and create it if it doesn't
+        if not os.path.exists("output/"):
+            os.mkdir("output/")
+
         # Create Folder
         os.mkdir("output/" + self.datetime_str + " " + self.sup_name)
         # Create log file

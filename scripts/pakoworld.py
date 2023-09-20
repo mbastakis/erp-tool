@@ -45,6 +45,7 @@ def parse_xml(xml_string, db_products):
         sup_code = product.find(XML_CODE).text
 
         if sup_code in db_products:
+            print("Checking product " + db_products[sup_code]['CODE'])
             seen_sup_codes.add(sup_code)
 
             # Info from XML
@@ -59,6 +60,9 @@ def parse_xml(xml_string, db_products):
             # Get availability from database
             extras = db.get_product_extras(
                 db_products[sup_code]['MTRL'])
+            if not extras:
+                logger.log("Product " + db_products[sup_code]
+                           ['CODE'] + " could not find availability/WebActive in Hobbo Database. Check it manually.")
 
             web_active = extras[1]
             availability = extras[0]
