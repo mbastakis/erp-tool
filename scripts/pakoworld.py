@@ -62,7 +62,7 @@ def parse_xml(xml_string, db_products):
                 db_products[sup_code]['MTRL'])
             if not extras:
                 logger.log("Product " + db_products[sup_code]
-                           ['CODE'] + " could not find availability/WebActive in Hobbo Database. Check it manually.")
+                           ['CODE'] + " could not find availability/WebActive in Hobbo Database. Check it manually. Not updating.")
                 continue
 
             web_active = extras[1]
