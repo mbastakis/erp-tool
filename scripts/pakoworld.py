@@ -170,13 +170,6 @@ if __name__ == "__main__":
     # 3. Get hobbo products from the database
     db_products = db.get_products(SUP_CODE)
 
-    db_products = {
-        '119-000716': {'CODE': '003804', 'PRICER': '15', 'SODISCOUNT': '17.86', 'MTRL': '6326', 'ISACTIVE': '1'},
-        '119-000768': {'CODE': '003807', 'PRICER': '29', 'SODISCOUNT': '25.84', 'MTRL': '6329', 'ISACTIVE': '1'},
-        '120-000059': {'CODE': '003813', 'PRICER': '21', 'SODISCOUNT': '21.43', 'MTRL': '6335', 'ISACTIVE': '1'},
-        '039-999921': {'CODE': '009999', 'PRICER': '62', 'SODISCOUNT': '24.62', 'MTRL': '6336', 'ISACTIVE': '1'}
-    }
-
     if not db_products:
         print("Failed to retrieve products from the database")
         log("Failed to retrieve products from the database")
