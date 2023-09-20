@@ -76,8 +76,11 @@ def parse_xml(xml_string, db_products):
                                             100 / float(retail_xml)), 2))
 
             # Get availability from database
-            availability = db.get_product_stock_status(
+            extras = db.get_product_extras(
                 db_products[sup_code]['MTRL'])
+
+            web_active = extras[1]
+            availability = extras[0]
             if availability == '1':
                 log("Product " + db_products[sup_code]
                     ['CODE'] + " has availability 1 in Hobbo Database. Not updating.")
@@ -98,7 +101,10 @@ def parse_xml(xml_string, db_products):
                     'CODE1': sup_code,
                     'PRICE': 0,
                     'DISCOUNT': 0,
-                    'STOCK': 4
+                    'STOCK': 4,
+                    'KEY': db_products[sup_code]['MTRL'],
+                    'ISACTIVE': '0',
+                    'WEBACTIVE': '0'
                 })
                 continue
 
@@ -110,7 +116,10 @@ def parse_xml(xml_string, db_products):
                     'CODE1': sup_code,
                     'PRICE': retail_xml,
                     'DISCOUNT': discount_xml,
-                    'STOCK': availability_xml
+                    'STOCK': availability_xml,
+                    'KEY': db_products[sup_code]['MTRL'],
+                    'ISACTIVE': '1',
+                    'WEBACTIVE': '1' if availability_xml != '4' else '0'
                 })
                 # Log the updates that happened
                 log("Product " + db_products[sup_code]['CODE'] + " updated from " + availability + "/" +
@@ -126,7 +135,10 @@ def parse_xml(xml_string, db_products):
             'CODE1': code,
             'PRICE': 0,
             'DISCOUNT': 0,
-            'STOCK': '4'
+            'STOCK': '4',
+            'KEY': db_products[sup_code]['MTRL'],
+            'ISACTIVE': '0',
+            'WEBACTIVE': '0'
         })
 
     return output
@@ -183,7 +195,10 @@ if __name__ == "__main__":
     create_xl(updated_products)
 
     # 6. Update the database
-    # TODO: To be done
+    if not db.update_products(updated_products):
+        print("Failed to update the database")
+        log("Failed to update the database")
+        exit()
 
     print("Finished successfully!")
     log("Finished successfully!")

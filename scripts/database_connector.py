@@ -103,23 +103,56 @@ class DatabaseConnector:
         else:
             return False
 
-    def get_product_stock_status(self, product_key):
+    def get_product_extras(self, mltr_key):
         payload = {
             "service": "getData",
             "clientID": self.client_id,
             "appId": self.app_id,
             "object": "ITEM",
             "FORM": "",
-            "KEY": product_key,
-            "LOCATEINFO": "ITEEXTRA:UTBL04;ITEM:CODE1"
+            "KEY": mltr_key,
+            "LOCATEINFO": "ITEEXTRA:UTBL04,BOOL01;"
         }
         response = requests.post(self.url, json=payload)
 
         if response.status_code == 200:
             response_data = response.json()
             if response_data['success']:
-                return response_data['data']['ITEEXTRA'][0]['UTBL04'].split('|')[0]
+                return [response_data['data']['ITEEXTRA'][0]['UTBL04'].split('|')[0], response_data['data']['ITEEXTRA'][0]['BOOL01']]
             else:
                 return False
         else:
             return False
+
+    def update_products(self, updated_products):
+
+        for product in updated_products:
+            payload = {
+                "service": "setData",
+                "clientID": self.client_id,
+                "appId": self.app_id,
+                "object": "ITEM",
+                "key": product['KEY'],
+                "data": {
+                    "ITEM": {
+                        "PRICER": product['PRICE'],
+                        "SODISCOUNT": product['DISCOUNT'],
+                        "ISACTIVE": product['ISACTIVE'],
+                    },
+                    "ITEEXTRA": {
+                        "UTBL04": product['STOCK'],
+                        "BOOL01": product['WEBACTIVE']
+                    }
+                }
+            }
+            response = requests.post(self.url, json=payload)
+            if response.status_code == 200:
+                response_data = response.json()
+                if response_data['success']:
+                    continue
+                else:
+                    return False
+            else:
+                return False
+
+        return True
