@@ -81,6 +81,8 @@ def parse_xml(xml_string, db_products):
 
             web_active = extras[1]
             availability = extras[0]
+            print(availability)
+            print(web_active)
             if availability == '1':
                 log("Product " + db_products[sup_code]
                     ['CODE'] + " has availability 1 in Hobbo Database. Not updating.")
