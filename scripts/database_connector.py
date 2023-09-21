@@ -156,3 +156,26 @@ class DatabaseConnector:
                 return False
 
         return True
+
+    def get_product_extras(self, COMPANY_VALUE):
+        payload = {
+            "service": "selectorFields",
+            "clientID": self.client_id,
+            "appId": self.app_id,
+            "TABLENAME": "ITEEXTRA",
+            "KEYNAME": "COMPANY",
+            "KEYVALUE": COMPANY_VALUE,
+            "RESULTFIELDS": "MTRL,UTBL04,BOOL01"
+        }
+        response = requests.post(self.url, json=payload)
+
+        if response.status_code == 200:
+            response_data = response.json()
+            if response_data['success']:
+                result = {item['MTRL']: {'UTBL04': item.get(
+                    'UTBL04', None), 'BOOL01': item.get('BOOL01', None)} for item in response_data['rows']}
+                return result
+            else:
+                return False
+        else:
+            return False

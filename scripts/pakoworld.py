@@ -16,6 +16,7 @@ XML_WEBOFFER = "weboffer_price_with_vat"
 
 SUP_CODE = 105
 SUP_NAME = "PakoWorld"
+COMPANY = "900"
 
 
 # Logic
@@ -34,7 +35,7 @@ def convert_xml_availability_to_enum(availability):
         return '2'
 
 
-def parse_xml(xml_string, db_products):
+def parse_xml(xml_string, db_products, db_products_extras):
     global db
     root = ET.fromstring(xml_string)
 
@@ -58,15 +59,22 @@ def parse_xml(xml_string, db_products):
                                             100 / float(retail_xml)), 2))
 
             # Get availability from database
-            extras = db.get_product_extras(
-                db_products[sup_code]['MTRL'])
+            extras = db_products_extras[db_products[sup_code]['MTRL']]
             if not extras:
                 logger.log("Product " + db_products[sup_code]
-                           ['CODE'] + " could not find availability/WebActive in Hobbo Database. Check it manually. Not updating.")
+                           ['CODE'] + " has no extras (availability, Webactive) in Hobbo Database. Not updating.")
                 continue
 
-            web_active = extras[1]
-            availability = extras[0]
+            web_active = extras["BOOL01"]
+            if web_active == None:
+                logger.log("Product " + db_products[sup_code]
+                           ['CODE'] + " has no Webactive in Hobbo Database. Not updating.")
+                continue
+            availability = extras["UTBL04"]
+            if availability == None:
+                logger.log("Product " + db_products[sup_code]
+                           ['CODE'] + " has no availability in Hobbo Database. Not updating.")
+                continue
 
             if availability == '1':
                 logger.log("Product " + db_products[sup_code]
@@ -161,20 +169,29 @@ if __name__ == "__main__":
         exit()
     print("Successfully retrieved products from the database")
 
+    # 3.5 Get the extras for each product
+    db_products_extras = db.get_product_extras(COMPANY)
+    if not db_products_extras:
+        print("Failed to retrieve products extras from the database")
+        logger.log("Failed to retrieve products extras from the database")
+        exit()
+    print("Successfully retrieved products extras from the database")
+
     # 4. Parse the XML file
-    updated_products = parse_xml(xml.get_xml(), db_products)
+    updated_products = parse_xml(
+        xml.get_xml(), db_products, db_products_extras)
 
     # 5. Create the XL file
     create_xl(updated_products, SUP_NAME, logger.get_datetime_str())
     print("XL file created successfully")
 
     # 6. Update the database
-    print("Updating the database")
-    if not db.update_products(updated_products):
-        print("Failed to update the database")
-        logger.log("Failed to update the database")
-        exit()
-    print("Database updated successfully")
+    # print("Updating the database")
+    # if not db.update_products(updated_products):
+    #     print("Failed to update the database")
+    #     logger.log("Failed to update the database")
+    #     exit()
+    # print("Database updated successfully")
 
     print("Finished successfully!")
     logger.log("Finished successfully!")
