@@ -115,6 +115,8 @@ def parse_xml(xml_string, db_products):
     # Check product codes that were not found
     missing_product_codes = set(db_products.keys()) - seen_sup_codes
     for code in missing_product_codes:
+        if db_products[code]['ISACTIVE'] == '0':
+            continue
         logger.log("Product " + db_products[code]['CODE'] +
                    " was not found in the XML file. Setting it to availability=4.")
         output.append({
