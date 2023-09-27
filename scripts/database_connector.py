@@ -98,7 +98,7 @@ class DatabaseConnector:
                 excluded_codes = utils.get_excluded_codes()
                 result = {
                     d['CODE1']: {k: v for k, v in d.items() if k != 'CODE1'}
-                    for d in response_data['rows'] if 'CODE1' in d and d['CODE1'] not in excluded_codes
+                    for d in response_data['rows'] if 'CODE1' in d and d['CODE'] not in excluded_codes
                 }
                 return result
             else:
