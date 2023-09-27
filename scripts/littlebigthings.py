@@ -21,17 +21,9 @@ COMPANY = "900"
 
 # Logic
 def convert_xml_availability_to_enum(availability):
-    if (availability == 'Διαθέσιμο'):
-        return '2'
-    elif (availability == 'Εξαντλήθηκε'):
+    if availability == '0':
         return '4'
-    elif (availability == 'Αναμένεται'):
-        return '4'
-    elif (availability == 'Άμεση παραλαβή | Παράδοση σε 1 έως 3 ημέρες εργάσιμες'):
-        return '2'
-    elif (availability == 'Κατόπιν Παραγγελίας (30 Ημέρες)'):
-        return '5'
-    elif (availability == 'Παραλαβή ή Παράδοση, σε 4-10 εργάσιμες ημέρες'):
+    else:
         return '2'
 
 
@@ -54,9 +46,11 @@ def parse_xml(xml_string, db_products, db_products_extras):
                 product.find(XML_AVAILABILITY).text)
             retail_xml = str(product.find(XML_RETAIL).text)
             weboffer_xml = str(product.find(XML_WEBOFFER).text)
-
-            discount_xml = str(round(100 - (float(weboffer_xml) *
-                                            100 / float(retail_xml)), 2))
+            if weboffer_xml == 'None':
+                discount_xml = '0.0'
+            else:
+                discount_xml = str(round(100 - (float(weboffer_xml) *
+                                                100 / float(retail_xml)), 2))
 
             # Get availability from database
             extras = db_products_extras[db_products[sup_code]['MTRL']]
@@ -138,7 +132,6 @@ def parse_xml(xml_string, db_products, db_products_extras):
             'WEBACTIVE': '0'
         })
 
-    exit()
     return output
 
 
