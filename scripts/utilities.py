@@ -17,7 +17,7 @@ def create_xl(hobbo_data, sup_name, datetime_str):
 
 def get_excluded_codes():
     words = []
-    with open('./excluded_codes.conf', 'r') as file:
+    with open('./.excluded_codes.conf', 'r') as file:
         for line in file:
             word = line.strip()
             words.append(word)
