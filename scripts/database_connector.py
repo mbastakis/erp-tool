@@ -1,5 +1,6 @@
 import json
 import requests
+import utilities as utils
 
 # Constants
 BASE_URL = 'http://hobbo.oncloud.gr/s1services'
@@ -94,9 +95,11 @@ class DatabaseConnector:
         if response.status_code == 200:
             response_data = response.json()
             if response_data['success']:
-                result = {d['CODE1']: {k: v for k, v in d.items() if k != 'CODE1'}
-                          for d in response_data['rows'] if 'CODE1' in d}
-
+                excluded_codes = utils.get_excluded_codes()
+                result = {
+                    d['CODE1']: {k: v for k, v in d.items() if k != 'CODE1'}
+                    for d in response_data['rows'] if 'CODE1' in d and d['CODE1'] not in excluded_codes
+                }
                 return result
             else:
                 return False

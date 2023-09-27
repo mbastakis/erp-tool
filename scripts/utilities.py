@@ -13,3 +13,12 @@ def create_xl(hobbo_data, sup_name, datetime_str):
                 "_διαθεσιμοτητα_" + datetime_str + ".xlsx", index=False)
 
     return True
+
+
+def get_excluded_codes():
+    words = []
+    with open('./excluded_codes.conf', 'r') as file:
+        for line in file:
+            word = line.strip()
+            words.append(word)
+    return words
