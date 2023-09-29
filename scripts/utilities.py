@@ -22,3 +22,14 @@ def get_excluded_codes():
             word = line.strip()
             words.append(word)
     return words
+
+
+def str_to_int(item):
+    if item == None:
+        return 0
+    elif type(item) == float and math.isnan(item):
+        return 0
+    else:
+        return float(item.split(' ')[0])
+
+    return
