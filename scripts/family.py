@@ -121,6 +121,18 @@ def parse_xml(xml_string, db_products, db_products_extras):
     for code in missing_product_codes:
         if db_products[code]['ISACTIVE'] == '0':
             continue
+
+        extras = db_products_extras[db_products[code]['MTRL']]
+        if not extras:
+            logger.log("Product " + db_products[sup_code]
+                       ['CODE'] + " has no extras (availability, Webactive) in Hobbo Database. Not updating.")
+            continue
+        availability = extras["UTBL04"]
+        if availability == '1':
+            logger.log("Product " + db_products[code]['CODE'] +
+                       " has availability 1 in Hobbo Database. Not updating.")
+            continue
+
         logger.log("Product " + db_products[code]['CODE'] +
                    " was not found in the XML file. Setting it to availability=4.")
         output.append({
@@ -182,12 +194,12 @@ if __name__ == "__main__":
     print("XL file created successfully")
 
     # 6. Update the database
-    print("Updating the database")
-    if not db.update_products(updated_products):
-        print("Failed to update the database")
-        logger.log("Failed to update the database")
-        exit()
-    print("Database updated successfully")
+    # print("Updating the database")
+    # if not db.update_products(updated_products):
+    #     print("Failed to update the database")
+    #     logger.log("Failed to update the database")
+    #     exit()
+    # print("Database updated successfully")
 
     print("Finished successfully!")
     logger.log("Finished successfully!")
