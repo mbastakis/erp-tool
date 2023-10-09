@@ -23,7 +23,7 @@ COMPANY = "900"
 # Logic
 def convert_xml_availability_to_enum(availability):
     if (availability == 'in_stock'):
-        return '1'
+        return '2'
     else:
         return '4'
 
