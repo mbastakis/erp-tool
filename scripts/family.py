@@ -194,12 +194,12 @@ if __name__ == "__main__":
     print("XL file created successfully")
 
     # 6. Update the database
-    # print("Updating the database")
-    # if not db.update_products(updated_products):
-    #     print("Failed to update the database")
-    #     logger.log("Failed to update the database")
-    #     exit()
-    # print("Database updated successfully")
+    print("Updating the database")
+    if not db.update_products(updated_products):
+        print("Failed to update the database")
+        logger.log("Failed to update the database")
+        exit()
+    print("Database updated successfully")
 
     print("Finished successfully!")
     logger.log("Finished successfully!")
