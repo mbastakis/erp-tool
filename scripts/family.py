@@ -71,6 +71,11 @@ def parse_xml(xml_string, db_products, db_products_extras):
                            ['CODE'] + " has no availability in Hobbo Database. Not updating.")
                 continue
 
+            if availability == '1':
+                logger.log("Product " + db_products[sup_code]
+                           ['CODE'] + " has availability 1 in Hobbo Database. Not updating.")
+                continue
+
             # Check if discount and retail are numbers
             try:
                 discount = float(db_products[sup_code]['SODISCOUNT'])
