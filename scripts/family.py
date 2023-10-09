@@ -78,10 +78,10 @@ def parse_xml(xml_string, db_products, db_products_extras):
             try:
                 discount = float(db_products[sup_code]['SODISCOUNT'])
                 retail = float(db_products[sup_code]['PRICER'])
-                retail_xml = "{:.2f}".format(retail_xml)
 
                 discount = str(discount)
                 retail = "{:.2f}".format(retail)
+                retail_xml = "{:.2f}".format(float(retail_xml))
             except ValueError:
                 logger.log("Product " + db_products[sup_code]
                            ['CODE'] + " has invalid discount or retail price in Hobbo Database. Setting it to availability=4.")
