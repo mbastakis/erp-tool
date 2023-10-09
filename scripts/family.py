@@ -4,7 +4,6 @@ from logger import Logger
 from utilities import create_xl
 from utilities import str_to_int
 
-
 import xml.etree.ElementTree as ET
 
 # Constants
@@ -45,16 +44,14 @@ def parse_xml(xml_string, db_products, db_products_extras):
             # Info from XML
             availability_xml = convert_xml_availability_to_enum(
                 product.find(XML_AVAILABILITY).text)
-            retail_xml = str(str_to_int(
-                product.find(XML_RETAIL).text
-            ))
+            retail_xml = str(str_to_int(product.find(XML_RETAIL).text))
+            weboffer_xml = str(str_to_int(product.find(XML_WEBOFFER).text))
 
-            weboffer_xml = str(str_to_int(
-                product.find(XML_WEBOFFER).text
-            ))
-
-            discount_xml = str(round(100 - (float(weboffer_xml) *
-                                            100 / float(retail_xml)), 2))
+            if weboffer_xml == '0':
+                discount_xml = '0.0'
+            else:
+                discount_xml = str(round(100 - (float(weboffer_xml) *
+                                                100 / float(retail_xml)), 2))
 
             # Get availability from database
             extras = db_products_extras[db_products[sup_code]['MTRL']]
