@@ -28,7 +28,7 @@ def convert_xml_availability_to_enum(availability):
         return '4'
 
 
-def parse_xml(xml_string, db_products, db_products_extras, db_products_quantity):
+def parse_xml(xml_string, db_products, db_products_extras):
     global db
     root = ET.fromstring(xml_string)
 
@@ -78,6 +78,7 @@ def parse_xml(xml_string, db_products, db_products_extras, db_products_quantity)
             try:
                 discount = float(db_products[sup_code]['SODISCOUNT'])
                 retail = float(db_products[sup_code]['PRICER'])
+                retail_xml = "{:.2f}".format(retail_xml)
 
                 discount = str(discount)
                 retail = "{:.2f}".format(retail)
@@ -170,17 +171,9 @@ if __name__ == "__main__":
         exit()
     print("Successfully retrieved products extras from the database")
 
-    # 3.5.5 Get the quantity for each product
-    db_products_quantity = db.get_product_quantity()
-    if not db_products_quantity:
-        print("Failed to retrieve products quantity from the database")
-        logger.log("Failed to retrieve products quantity from the database")
-        exit()
-    print("Successfully retrieved products quantity from the database")
-
     # 4. Parse the XML file
     updated_products = parse_xml(
-        xml.get_xml(), db_products, db_products_extras, db_products_quantity)
+        xml.get_xml(), db_products, db_products_extras)
 
     # 5. Create the XL file
     create_xl(updated_products, SUP_NAME, logger.get_datetime_str())
