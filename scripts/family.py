@@ -4,7 +4,6 @@ from logger import Logger
 from utilities import create_xl
 from utilities import str_to_int
 
-
 import xml.etree.ElementTree as ET
 
 # Constants

@@ -161,3 +161,26 @@ class DatabaseConnector:
                 return False
         else:
             return False
+
+    def get_product_quantity(self):
+        payload = {
+            "service": "selectorFields",
+            "clientID": self.client_id,
+            "appId": self.app_id,
+            "TABLENAME": "ITEMTRDATA",
+            "KEYNAME": "COMPANY",
+            "KEYVALUE": 900,
+            "RESULTFIELDS": "MTRL, QTY1"
+        }
+        response = requests.post(self.url, json=payload)
+
+        if response.status_code == 200:
+            response_data = response.json()
+            if response_data['success']:
+                result_dict = {item['MTRL']: item['QTY1']
+                               for item in response_data['rows']}
+                return result_dict
+            else:
+                return False
+        else:
+            return False
