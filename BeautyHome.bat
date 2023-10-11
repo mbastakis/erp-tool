@@ -1,6 +1,6 @@
 @echo off
 
 echo Running Beautyhome
-python3 ./scripts/beautyhome.py
+python3 ./scripts/main.py beautyhome
 
 pause

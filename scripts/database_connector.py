@@ -106,27 +106,6 @@ class DatabaseConnector:
         else:
             return False
 
-    def get_product_extras(self, mltr_key):
-        payload = {
-            "service": "getData",
-            "clientID": self.client_id,
-            "appId": self.app_id,
-            "object": "ITEM",
-            "FORM": "",
-            "KEY": mltr_key,
-            "LOCATEINFO": "ITEEXTRA:UTBL04,BOOL01;"
-        }
-        response = requests.post(self.url, json=payload)
-
-        if response.status_code == 200:
-            response_data = response.json()
-            if response_data['success']:
-                return [response_data['data']['ITEEXTRA'][0]['UTBL04'].split('|')[0], response_data['data']['ITEEXTRA'][0]['BOOL01']]
-            else:
-                return False
-        else:
-            return False
-
     def update_products(self, updated_products):
 
         for product in updated_products:

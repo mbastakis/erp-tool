@@ -1,6 +1,6 @@
 @echo off
 
 echo Running Showood
-python3 ./scripts/showood.py
+python3 ./scripts/main.py showood
 
 pause

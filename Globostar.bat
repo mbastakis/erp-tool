@@ -1,6 +1,6 @@
 @echo off
 
 echo Running Globostar
-python3 ./scripts/globostar.py
+python3 ./scripts/main.py globostar
 
 pause
