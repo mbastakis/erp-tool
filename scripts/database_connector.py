@@ -1,5 +1,6 @@
 import json
 import requests
+import time
 import utilities as utils
 
 # Constants
@@ -107,6 +108,8 @@ class DatabaseConnector:
             return False
 
     def update_products(self, updated_products):
+        MAX_RETRIES = 5  # Set the max number of retries
+        RETRY_WAIT = 5   # Time (in seconds) to wait between retries
 
         for product in updated_products:
             payload = {
@@ -127,14 +130,29 @@ class DatabaseConnector:
                     }
                 }
             }
-            response = requests.post(self.url, json=payload)
-            if response.status_code == 200:
-                response_data = response.json()
-                if response_data['success']:
-                    continue
+
+            retries = 0
+            while retries <= MAX_RETRIES:
+                response = requests.post(self.url, json=payload)
+                if response.status_code == 200:
+                    response_data = response.json()
+                    if response_data['success']:
+                        break  # exit the while loop, move on to the next product
+                    else:
+                        retries += 1
+                        print(
+                            f"Failed to update product {product['KEY']}. Retry #{retries}")
+                        time.sleep(RETRY_WAIT)
                 else:
-                    return False
-            else:
+                    retries += 1
+                    print(
+                        f"Failed to update product {product['KEY']} with status code {response.status_code}. Retry #{retries}")
+                    time.sleep(RETRY_WAIT)
+
+            # Check if we exited the loop due to max retries
+            if retries > MAX_RETRIES:
+                print(
+                    f"Failed to update product {product['KEY']} after {MAX_RETRIES} retries.")
                 return False
 
         return True
