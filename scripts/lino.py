@@ -7,12 +7,12 @@ from utilities import create_xl
 import xml.etree.ElementTree as ET
 
 # Constants
-XML_URL = ""
-XML_ROOT = ""
-XML_CODE = ""
-XML_AVAILABILITY = ""
-XML_RETAIL = ""
-XML_WEBOFFER = ""
+XML_URL = "https://www.linohome.gr/wp-load.php?security_token=xml"
+XML_ROOT = "items/item"
+XML_CODE = "mpn"
+XML_AVAILABILITY = "stock_status"
+XML_RETAIL = "regular_price_with_vat"
+XML_WEBOFFER = "sale_price_with_vat"
 
 SUP_CODE = 47
 SUP_NAME = "Lino"
@@ -21,18 +21,10 @@ COMPANY = "900"
 
 # Logic
 def convert_xml_availability_to_enum(availability):
-    if (availability == 'Διαθέσιμο'):
+    if (availability == 'instock'):
         return '2'
-    elif (availability == 'Εξαντλήθηκε'):
+    elif (availability == 'outofstock'):
         return '4'
-    elif (availability == 'Αναμένεται'):
-        return '4'
-    elif (availability == 'Άμεση παραλαβή | Παράδοση σε 1 έως 3 ημέρες εργάσιμες'):
-        return '2'
-    elif (availability == 'Κατόπιν Παραγγελίας (30 Ημέρες)'):
-        return '5'
-    elif (availability == 'Παραλαβή ή Παράδοση, σε 4-10 εργάσιμες ημέρες'):
-        return '2'
 
 
 def create_sup_product_dict(availability, retail, weboffer):
