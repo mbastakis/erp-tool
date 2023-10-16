@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 # Constants
 XML_URL = "https://www.linohome.gr/wp-load.php?security_token=xml"
-XML_ROOT = "items/item"
+XML_ROOT = "item"
 XML_CODE = "mpn"
 XML_AVAILABILITY = "stock_status"
 XML_RETAIL = "regular_price_with_vat"
