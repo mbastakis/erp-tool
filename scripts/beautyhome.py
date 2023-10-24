@@ -38,6 +38,8 @@ def create_sup_product_dict(availability, retail, weboffer):
     else:
         discount = str(round(100 - (float(weboffer) * 100 / float(retail)), 2))
 
+    retail = "{:.2f}".format(float(retail))
+
     return {
         "AVAILABILITY": availability,
         "RETAIL": retail,
