@@ -30,6 +30,8 @@ def convert_xml_availability_to_enum(availability):
         return '2'
     elif (availability == 'Κατόπιν Παραγγελίας (30 Ημέρες)'):
         return '5'
+    elif (availability == 'Κατόπιν Παραγγελίας'):
+        return '5'
     elif (availability == 'Παραλαβή ή Παράδοση, σε 4-10 εργάσιμες ημέρες'):
         return '2'
 
