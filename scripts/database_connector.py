@@ -202,3 +202,25 @@ class DatabaseConnector:
                 return False
         else:
             return False
+
+    def get_all_mtrsup_values(self):
+        # Prepare the payload for the API request
+        payload = {
+            "service": "selectorFields",
+            "clientID": self.client_id,
+            "appId": self.app_id,
+            "TABLENAME": "ITEM",
+            "KEYNAME": "COMPANY",
+            "KEYVALUE": 900,
+            "RESULTFIELDS": "CODE,CODE1,MTRSUP"
+        }
+
+        # Send the request to the API
+        response = requests.post(self.url, json=payload)
+
+        # Process the response
+        if response.status_code == 200:
+            print(response.json())
+        else:
+            print(f"Failed to make request, status code: {response.status_code}")
+            return None
