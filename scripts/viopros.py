@@ -147,11 +147,11 @@ def main():
     create_xl(updated_products, "Viopros", logger.get_datetime_str())
 
     # Update the database
-    # print("Updating the database")
-    # if not db.update_products(updated_products):
-    #     print("Failed to update the database")
-    #     logger.log("Failed to update the database")
-    # print("Done")
+    print("Updating the database")
+    if not db.update_products(updated_products):
+        print("Failed to update the database")
+        logger.log("Failed to update the database")
+    print("Done")
 
     logger.log("Script finished")
 
