@@ -66,13 +66,12 @@ def check_product_updates(new_products, products, products_extra):
             continue
 
         seen_sup_codes.add(product_code)
-        print("Checking product " + products[product_code]['CODE'])
 
         # 1. Get the product's availability from the XL
         availability = new_products[product_code]['ΔΙΑΘΕΣΙΜΟΤΗΤΑ']
         availability = convert_xml_availability_to_enum(availability)
 
-        retail = new_products[product_code]['ΛΙΑΝΙΚΗ ΤΙΜΗ ΚΑΤΑΛΟΓΟΥ']
+        retail = "{:.2f}".format(new_products[product_code]['ΛΙΑΝΙΚΗ ΤΙΜΗ ΚΑΤΑΛΟΓΟΥ'])
 
         weboffer = new_products[product_code]['ΚΑΤΩΤΕΡΗ ΤΙΜΗ ΠΩΛΗΣΗΣ']
 
@@ -93,7 +92,8 @@ def check_product_updates(new_products, products, products_extra):
         # 3. Check if the product needs to be updated
         if availability == hobbo_availability and discount == hobbo_discount and retail == hobbo_retail and (hobbo_webactive == '1' if availability != '4' else hobbo_webactive == '0'):
             continue
-            
+        
+        print("Updating product " + product['CODE'] + " with code " + product_code)
         # 4. Update the database
         output.append({
             'CODE': product['CODE'],
