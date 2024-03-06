@@ -46,7 +46,7 @@ def create_sup_product_dict(availability, retail, weboffer):
 
     return {
         "AVAILABILITY": availability,
-        "RETAIL": retail,
+        "RETAIL": weboffer,
         "DISCOUNT": discount
     }
 
