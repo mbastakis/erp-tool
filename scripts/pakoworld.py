@@ -41,8 +41,9 @@ def create_sup_product_dict(availability, retail, weboffer):
     retail = str(retail.text)
     weboffer = str(weboffer.text)
 
-    discount = str(round(100 - (float(weboffer) * 100 / float(retail)), 2))
-
+    # discount = str(round(100 - (float(weboffer) * 100 / float(retail)), 2))
+    discount = 0
+    
     return {
         "AVAILABILITY": availability,
         "RETAIL": retail,
