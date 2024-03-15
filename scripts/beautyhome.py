@@ -26,6 +26,8 @@ def convert_xml_availability_to_enum(availability):
         return '2'
     elif (availability == 'outofstock'):
         return '4'
+    elif (availability == 'onbackorder'):
+        return '4'
     return None
 
 
