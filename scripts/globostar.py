@@ -33,13 +33,17 @@ def create_sup_product_dict(availability, retail, weboffer):
     retail = str(retail.text)
     weboffer = str(weboffer.text)
 
-    discount = str(round(100 - (float(weboffer) * 100 / float(retail)), 2))
-    if discount == '-0.0':
-        discount = '0.0'
-
+    discount = "0.0"
+    # discount = str(round(100 - (float(weboffer) * 100 / float(retail)), 2))
+    # print(discount)
+    # if discount == '-0.0':
+    #     discount = '0.0'
+    
+    # Here I changed them place, the retail will be the web offer, we had an issue with the weboffer prices
+    # Being higher than the retail prices. And as result we got negative discounts.
     return {
         "AVAILABILITY": availability,
-        "RETAIL": retail,
+        "RETAIL": weboffer,
         "DISCOUNT": discount
     }
 
