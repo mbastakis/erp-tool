@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 # Constants
 XML_URL = "https://www.pakoworld.com/?route=extension/feed/csxml_feed&token=MTUzOTNMUDQwNQ==&lang=el"
-XML_ROOT = "products/product"
+XML_ROOT = "product"
 XML_CODE = "model"
 XML_AVAILABILITY = "availability"
 XML_RETAIL = "retail_price_with_vat"
@@ -43,7 +43,7 @@ def create_sup_product_dict(availability, retail, weboffer):
 
     # Old way of calculating discount
     # discount = str(round(100 - (float(weboffer) * 100 / float(retail)), 2))
-    
+
     # New way of calculating discount
     if float(retail) > float(weboffer):
         discount = str(round(100 - (float(weboffer) * 100 / float(retail)), 2))
