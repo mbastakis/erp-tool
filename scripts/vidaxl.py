@@ -28,15 +28,11 @@ def convert_xml_availability_to_enum(availability):
 def create_sup_product_dict(availability, retail, weboffer):
     availability = convert_xml_availability_to_enum(availability.text)
     weboffer = str(weboffer.text)
-    retail = "{:.2f}".format(float(weboffer) * 1.25)
-    
-    # New way of calculating discount
-    discount = str(round(100 - (float(weboffer) * 100 / float(retail)), 2))
 
     return {
         "AVAILABILITY": availability,
-        "RETAIL": retail,
-        "DISCOUNT": discount
+        "RETAIL": weboffer,
+        "DISCOUNT": "0"
     }
 
 
