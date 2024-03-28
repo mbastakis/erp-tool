@@ -7,6 +7,8 @@ import argparse
 import importlib
 import xml.etree.ElementTree as ET
 
+import tempfile
+
 
 class ProductUpdater:
 
@@ -54,55 +56,66 @@ class ProductUpdater:
              and sup_dict["AVAILABILITY"] != '4')
 
     def parse_xml(self, xml_string, db_products, db_products_extras):
-        root = ET.fromstring(xml_string)
+        # create temp file
+        temp_file = tempfile.NamedTemporaryFile(delete=False, mode='wb')
+        temp_file.write(xml_string)
+        temp_file.close()
+        if not temp_file:
+            self.logger.log("Could not create xml file")
+            return
+        
+        # root = ET.fromstring(xml_string)
 
         output = []
         seen_sup_codes = set()
 
-        for product in root.findall(self.module.XML_ROOT):
-            sup_code = product.find(self.module.XML_CODE).text
+        for event, product in ET.iterparse(temp_file.name, events=("end",)):
+            if product.tag == self.module.XML_ROOT:
+                sup_code = product.find(self.module.XML_CODE).text
 
-            # 1.Check if the product exists in the xml
-            if sup_code not in db_products:
-                continue
+                # 1.Check if the product exists in the xml
+                if sup_code not in db_products:
+                    continue
 
-            # 2.Get Product info from XML
-            print("Checking product " + db_products[sup_code]['CODE'])
-            seen_sup_codes.add(sup_code)
+                # 2.Get Product info from XML
+                print("Checking product " + db_products[sup_code]['CODE'])
+                seen_sup_codes.add(sup_code)
 
-            availability_element = product.find(self.module.XML_AVAILABILITY)
-            retail_element = product.find(self.module.XML_RETAIL)
-            weboffer_element = product.find(self.module.XML_WEBOFFER)
+                availability_element = product.find(self.module.XML_AVAILABILITY)
+                retail_element = product.find(self.module.XML_RETAIL)
+                weboffer_element = product.find(self.module.XML_WEBOFFER)
+                
+                product.clear()
+                
+                sup_dict = self.module.create_sup_product_dict(
+                    availability_element, retail_element, weboffer_element)
 
-            sup_dict = self.module.create_sup_product_dict(
-                availability_element, retail_element, weboffer_element)
+                # 3.Get Product info from Database
+                product_extras = self.get_product_extras(
+                    db_products[sup_code], db_products_extras[db_products[sup_code]['MTRL']])
+                if not product_extras:
+                    continue
 
-            # 3.Get Product info from Database
-            product_extras = self.get_product_extras(
-                db_products[sup_code], db_products_extras[db_products[sup_code]['MTRL']])
-            if not product_extras:
-                continue
+                hobbo_dict = self.module.create_hobbo_product_dict(
+                    db_products[sup_code])
 
-            hobbo_dict = self.module.create_hobbo_product_dict(
-                db_products[sup_code])
-
-            # 4.Check if the product needs to be updated
-            if not self.check_product_update(sup_dict, hobbo_dict, product_extras):
-                continue
-            # 5.Update the database
-            output.append({
-                'CODE': db_products[sup_code]['CODE'],
-                'CODE1': sup_code,
-                'PRICE': sup_dict["RETAIL"],
-                'DISCOUNT': sup_dict["DISCOUNT"],
-                'STOCK': sup_dict["AVAILABILITY"],
-                'KEY': db_products[sup_code]['MTRL'],
-                'ISACTIVE': '1',
-                'WEBACTIVE': '1' if sup_dict["AVAILABILITY"] != '4' else '0'
-            })
-            # 6.Log the updates that happened
-            self.logger.log("Product " + db_products[sup_code]['CODE'] + " updated from " + product_extras["AVAILABILITY"] + "/" +
-                            hobbo_dict["DISCOUNT"] + "/" + hobbo_dict["RETAIL"] + "/" + product_extras["WEBACTIVE"] + " to " + sup_dict["AVAILABILITY"] + "/" + sup_dict["DISCOUNT"] + "/" + sup_dict["RETAIL"] + "/" + ('1' if sup_dict["AVAILABILITY"] != '4' else '0') + " (Availability/Discount/Retail/WebActive)")
+                # 4.Check if the product needs to be updated
+                if not self.check_product_update(sup_dict, hobbo_dict, product_extras):
+                    continue
+                # 5.Update the database
+                output.append({
+                    'CODE': db_products[sup_code]['CODE'],
+                    'CODE1': sup_code,
+                    'PRICE': sup_dict["RETAIL"],
+                    'DISCOUNT': sup_dict["DISCOUNT"],
+                    'STOCK': sup_dict["AVAILABILITY"],
+                    'KEY': db_products[sup_code]['MTRL'],
+                    'ISACTIVE': '1',
+                    'WEBACTIVE': '1' if sup_dict["AVAILABILITY"] != '4' else '0'
+                })
+                # 6.Log the updates that happened
+                self.logger.log("Product " + db_products[sup_code]['CODE'] + " updated from " + product_extras["AVAILABILITY"] + "/" +
+                                hobbo_dict["DISCOUNT"] + "/" + hobbo_dict["RETAIL"] + "/" + product_extras["WEBACTIVE"] + " to " + sup_dict["AVAILABILITY"] + "/" + sup_dict["DISCOUNT"] + "/" + sup_dict["RETAIL"] + "/" + ('1' if sup_dict["AVAILABILITY"] != '4' else '0') + " (Availability/Discount/Retail/WebActive)")
 
         # Check product codes that were not found
         missing_product_codes = set(db_products.keys()) - seen_sup_codes
@@ -143,12 +156,12 @@ class ProductUpdater:
         create_xl(updated_products, self.module.SUP_NAME,
                   self.logger.get_datetime_str())
 
-        print("Updating the database")
-        if not self.db.update_products(updated_products):
-            print("Failed to update the database")
-            self.logger.log("Failed to update the database")
-            exit()
-        print("Database updated successfully")
+        # print("Updating the database")
+        # if not self.db.update_products(updated_products):
+        #     print("Failed to update the database")
+        #     self.logger.log("Failed to update the database")
+        #     exit()
+        # print("Database updated successfully")
 
         self.logger.log("Finished successfully!")
 
