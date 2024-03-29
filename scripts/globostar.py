@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 # Constants
 XML_URL = "https://www.ledking.gr/catalog-export/xml/oRrR0RPd8v0F77EMhe9RWof6zJl2plljIvMfiBjLqe4"
-XML_ROOT = "products/product"
+XML_ROOT = "product"
 XML_CODE = "code"
 XML_AVAILABILITY = "availability"
 XML_RETAIL = "price_with_vat"
@@ -38,7 +38,7 @@ def create_sup_product_dict(availability, retail, weboffer):
     # print(discount)
     # if discount == '-0.0':
     #     discount = '0.0'
-    
+
     # Here I changed them place, the retail will be the web offer, we had an issue with the weboffer prices
     # Being higher than the retail prices. And as result we got negative discounts.
     return {

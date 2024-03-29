@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 # Constants
 XML_URL = "https://showood.gr/modules/skroutzxml/feed.xml"
-XML_ROOT = "products/product"
+XML_ROOT = "product"
 XML_CODE = "id"
 XML_AVAILABILITY = "availability"
 XML_RETAIL = "price_with_vat"

@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 # Constants
 XML_URL = "https://malamashop.gr/wp-content/uploads/rex-feed/feed-200541.xml"
-XML_ROOT = "products/product"
+XML_ROOT = "product"
 XML_CODE = "ean"
 XML_AVAILABILITY = "availability"
 XML_RETAIL = "price"
