@@ -27,7 +27,12 @@ def convert_xml_availability_to_enum(availability):
 
 def create_sup_product_dict(availability, retail, weboffer):
     availability = convert_xml_availability_to_enum(availability.text)
-    weboffer = str(weboffer.text)
+
+    if weboffer is not None:
+        weboffer = str(weboffer.text)
+    else:
+        weboffer = "0.0"
+        availability = '4'
 
     return {
         "AVAILABILITY": availability,
