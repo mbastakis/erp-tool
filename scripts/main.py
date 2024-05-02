@@ -160,7 +160,7 @@ class ProductUpdater:
         if not self.db.update_products(updated_products):
             print("Failed to update the database")
             self.logger.log("Failed to update the database")
-            exit()
+            exit(-1)
         print("Database updated successfully")
 
         self.logger.log("Finished successfully!")
@@ -175,7 +175,8 @@ if __name__ == "__main__":
         module = importlib.import_module(args.supplier)
     except ImportError:
         print("Supplier not found")
-        exit()
+        exit(-1)
 
     updater = ProductUpdater(module)
     updater.main()
+    exit(0)

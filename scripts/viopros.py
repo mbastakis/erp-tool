@@ -81,7 +81,7 @@ def check_product_updates(new_products, products, products_extra):
         product_extras = products_extra[product['MTRL']]
         if not product_extras:
             print("Failed to get product extras for " + product['CODE'])
-            exit()
+            exit(-1)
         
         hobbo_availability = product_extras['UTBL04']
         hobbo_webactive = product_extras['BOOL01']

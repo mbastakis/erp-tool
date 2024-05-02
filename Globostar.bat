@@ -3,4 +3,9 @@
 echo Running Globostar
 python3 ./scripts/main.py globostar
 
-pause
+if %ERRORLEVEL% equ 0 (
+    exit
+) else (
+    echo Error encountered. Press any key to continue...
+    pause
+)
