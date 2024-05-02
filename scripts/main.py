@@ -178,6 +178,5 @@ if __name__ == "__main__":
         exit(-1)
 
     updater = ProductUpdater(module)
-    exit(-1)
     updater.main()
     exit(0)
