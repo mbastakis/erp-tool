@@ -7,11 +7,12 @@ from utilities import str_to_int
 import xml.etree.ElementTree as ET
 
 # Constants
-XML_URL = "https://malamashop.gr/wp-content/uploads/rex-feed/feed-200541.xml"
-XML_ROOT = "product"
-XML_CODE = "ean"
-XML_AVAILABILITY = "availability"
-XML_RETAIL = "price"
+# XML_URL = "https://malamashop.gr/wp-content/uploads/rex-feed/feed-200541.xml"
+XML_URL = "https://malamashop.gr/wp-load.php?security_key=9956dc2585dfeec3&export_id=8&action=get_data"
+XML_ROOT = "post"
+XML_CODE = "Sku"
+XML_AVAILABILITY = "Quantity"
+XML_RETAIL = "RegularPrice"
 XML_WEBOFFER = "SalePrice"
 
 SUP_CODE = 668
@@ -21,10 +22,12 @@ COMPANY = "900"
 
 # Logic
 def convert_xml_availability_to_enum(availability):
-    if (availability == 'in_stock'):
-        return '2'
-    else:
+    if availability == None:
         return '4'
+    if (float(availability) == 0) :
+        return '4'
+    else:
+        return '2'
 
 
 def create_sup_product_dict(availability, retail, weboffer):

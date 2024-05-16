@@ -156,12 +156,12 @@ class ProductUpdater:
         create_xl(updated_products, self.module.SUP_NAME,
                   self.logger.get_datetime_str())
 
-        print("Updating the database")
-        if not self.db.update_products(updated_products):
-            print("Failed to update the database")
-            self.logger.log("Failed to update the database")
-            exit(-1)
-        print("Database updated successfully")
+        # print("Updating the database")
+        # if not self.db.update_products(updated_products):
+        #     print("Failed to update the database")
+        #     self.logger.log("Failed to update the database")
+        #     exit(-1)
+        # print("Database updated successfully")
 
         self.logger.log("Finished successfully!")
 
