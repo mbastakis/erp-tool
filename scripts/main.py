@@ -122,6 +122,9 @@ class ProductUpdater:
         for code in missing_product_codes:
             if db_products[code]['ISACTIVE'] == '0':
                 continue
+            if db_products_extras[db_products[code]['MTRL']]['UTBL04'] == '1':
+                print("Product " + db_products[code]['CODE'] + " has availability 1. Not updating.")
+                continue
             self.logger.log("Product " + db_products[code]['CODE'] +
                             " was not found in the XML file. Setting it to availability=4.")
             output.append({
@@ -156,12 +159,12 @@ class ProductUpdater:
         create_xl(updated_products, self.module.SUP_NAME,
                   self.logger.get_datetime_str())
 
-        print("Updating the database")
-        if not self.db.update_products(updated_products):
-            print("Failed to update the database")
-            self.logger.log("Failed to update the database")
-            exit(-1)
-        print("Database updated successfully")
+        # print("Updating the database")
+        # if not self.db.update_products(updated_products):
+        #     print("Failed to update the database")
+        #     self.logger.log("Failed to update the database")
+        #     exit(-1)
+        # print("Database updated successfully")
 
         self.logger.log("Finished successfully!")
 
