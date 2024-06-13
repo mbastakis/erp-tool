@@ -22,7 +22,7 @@ COMPANY = "900"
 def convert_xml_availability_to_enum(availability):
     if availability == "0":
         return '4'
-    return '2'
+    return '3'
 
 
 def create_sup_product_dict(availability, retail, weboffer):
