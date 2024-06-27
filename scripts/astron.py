@@ -30,11 +30,9 @@ def create_sup_product_dict(availability, retail, weboffer):
     availability = convert_xml_availability_to_enum(availability.text)
     retail = str(retail.text).replace(',', '.')
     weboffer = str(weboffer.text).replace(',', '.')
-
-    # Old way of calculating discount
-    # discount = str(round(100 - (float(weboffer) * 100 / float(retail)), 2))
-
-    # New way of calculating discount
+    if weboffer == None or weboffer == '0.0' or weboffer == 'None':
+        weboffer = retail
+    
     if float(retail) > float(weboffer):
         discount = str(round(100 - (float(weboffer) * 100 / float(retail)), 2))
         weboffer = retail
