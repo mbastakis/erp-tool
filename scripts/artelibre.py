@@ -26,7 +26,6 @@ def convert_xml_availability_to_enum(availability):
     else:
         return '2'
 
-
 def get_retail_price(final_price: float, discount_percentage: float) -> float:
     if discount_percentage >= 1 or discount_percentage < 0:
         raise ValueError(
@@ -35,11 +34,12 @@ def get_retail_price(final_price: float, discount_percentage: float) -> float:
     starting_price = final_price / (1 - discount_percentage)
     return starting_price
 
-
 def create_sup_product_dict(availability, retail, weboffer):
     availability = convert_xml_availability_to_enum(availability.text)
     weboffer = str(weboffer.text)
-    retail = "{:.2f}".format(get_retail_price(float(weboffer), 0.4))
+    initial_retail = get_retail_price(float(weboffer), 0.4)
+    increased_retail = initial_retail * 1.10  # Increase by 10%
+    retail = "{:.2f}".format(increased_retail)
 
     discount = '40.0'
 
