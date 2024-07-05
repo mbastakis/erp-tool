@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<easy encoding="utf-8">
+<created_at>2024-07-05 14:11</created_at>
+<products>
+	<product>
+		<id><![CDATA[00001]]></id>
+		<number><![CDATA[420.00]]></number>
+		<normal_number>421</normal_number>
+		<string><![CDATA[test string]]></string>
+		<nested_items>
+			<nested_item>001-000069</nested_item>
+			<nested_item>001-000070</nested_item>
+		</nested_items>
+	</product>
+</products>
+</easy>

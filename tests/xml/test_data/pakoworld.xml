@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?><pakoworld xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pakoworld" url="http://www.pakoworld.com" encoding="utf-8">
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<pakoworld xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="pakoworld" url="http://www.pakoworld.com" encoding="utf-8">
 <created_at>2024-07-05 14:11</created_at>
 <products>
 	<product id="6">
