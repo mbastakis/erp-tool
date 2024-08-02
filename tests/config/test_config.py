@@ -5,9 +5,8 @@ def test_create_config_throw_FileNotFoundException():
     try:
         Config()
         assert False
-    except FileNotFoundError as e:
+    except FileNotFoundError:
         assert True
-
 
 def test_create_config_with_json():
     json_path = 'tests/config/test_data/test.json'
@@ -29,5 +28,5 @@ def test_config_values():
     assert config.data['test-array'] == ['test-value-1', 'test-value-2']
     assert config.data['test-object']['test-key-1'] == 'test-value-1'
     assert config.data['test-object']['test-key-2'] == 'test-value-2'
-    assert config.data['test-boolean'] == True
+    assert config.data['test-boolean'] is True
     assert config.data['test-number'] == 123
